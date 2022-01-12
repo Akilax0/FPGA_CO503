@@ -25,7 +25,7 @@ int main(void)
     /* 0x00-0xFF counting loop. */
     while( 1 ) 
     {
-        usleep(1000000); // Wait for about 0.1 seconds
+        usleep(100000); // Wait for about 0.1 seconds
 
         IOWR_8DIRECT(LED_BASE,OFFSET,count); // Write the value of "count" to the "led_out" PIO device
 

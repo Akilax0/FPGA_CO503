@@ -670,9 +670,9 @@ int main(void)
     /* 0x00-0xFF counting loop. */
     while( 1 ) 
     {
-        usleep(100000); // Wait for about 0.1 seconds
-   40204:	010000b4 	movhi	r4,2
-   40208:	2121a804 	addi	r4,r4,-31072
+        usleep(1000000); // Wait for about 0.1 seconds
+   40204:	010003f4 	movhi	r4,15
+   40208:	21109004 	addi	r4,r4,16960
    4020c:	00403ac0 	call	403ac <usleep>
 
         IOWR_8DIRECT(LED_BASE,OFFSET,count); // Write the value of "count" to the "led_out" PIO device
