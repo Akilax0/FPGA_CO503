@@ -6,9 +6,12 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element $${FILENAME}
+   {
+   }
    element jtag_uart.avalon_jtag_slave
    {
       datum baseAddress
@@ -73,14 +76,6 @@
          type = "int";
       }
    }
-   element jtag_uart.reset
-   {
-      datum _tags
-      {
-         value = "";
-         type = "String";
-      }
-   }
    element timer.reset
    {
       datum _tags
@@ -89,11 +84,11 @@
          type = "String";
       }
    }
-   element timer.s1
+   element jtag_uart.reset
    {
-      datum baseAddress
+      datum _tags
       {
-         value = "528384";
+         value = "";
          type = "String";
       }
    }
@@ -107,6 +102,14 @@
       datum baseAddress
       {
          value = "528416";
+         type = "String";
+      }
+   }
+   element timer.s1
+   {
+      datum baseAddress
+      {
+         value = "528384";
          type = "String";
       }
    }
@@ -146,14 +149,13 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="FirstSoc.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1641828975263" />
+ <parameter name="timeStamp" value="1641967131762" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
- <interface name="reset" internal="clock.clk_in_reset" type="reset" dir="end" />
  <interface
    name="led_out_external_connection"
    internal="led_out.external_connection"
@@ -468,4 +470,9 @@
  <connection kind="interrupt" version="12.1" start="cpu.d_irq" end="jtag_uart.irq">
   <parameter name="irqNumber" value="16" />
  </connection>
+ <connection
+   kind="reset"
+   version="12.1"
+   start="cpu.jtag_debug_module_reset"
+   end="clock.clk_in_reset" />
 </system>
