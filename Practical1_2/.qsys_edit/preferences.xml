@@ -3,18 +3,18 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="175" />
+   <connections preferredWidth="191" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="269" />
-   <clocksource preferredWidth="268" />
-   <frequency preferredWidth="249" />
+   <clockname preferredWidth="438" />
+   <clocksource preferredWidth="437" />
+   <frequency preferredWidth="419" />
   </columns>
  </clocktable>
  <library
-   expandedCategories="Library,Library/Peripherals/Microcontroller Peripherals,Project,Library/Peripherals" />
- <window width="1100" height="800" x="2680" y="44" />
+   expandedCategories="Library/Bridges/DMA,Library,Library/Bridges,Project,Library/Bridges/Memory-Mapped,Library/Bridges/Streaming" />
+ <window width="1726" height="928" x="2391" y="-9" />
 </preferences>
