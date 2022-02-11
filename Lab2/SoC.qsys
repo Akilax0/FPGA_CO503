@@ -100,11 +100,11 @@
          type = "String";
       }
    }
-   element timer.s1
+   element led_out.s1
    {
       datum baseAddress
       {
-         value = "0";
+         value = "150999056";
          type = "String";
       }
    }
@@ -116,11 +116,11 @@
          type = "boolean";
       }
    }
-   element led_out.s1
+   element timer.s1
    {
       datum baseAddress
       {
-         value = "150999056";
+         value = "0";
          type = "String";
       }
    }
@@ -168,7 +168,7 @@
  <parameter name="projectName" value="CSoC.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1644575526266" />
+ <parameter name="timeStamp" value="1644590475280" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
