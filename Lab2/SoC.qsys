@@ -6,9 +6,12 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element $${FILENAME}
+   {
+   }
    element jtag_uart.avalon_jtag_slave
    {
       datum baseAddress
@@ -97,11 +100,11 @@
          type = "String";
       }
    }
-   element led_out.s1
+   element timer.s1
    {
       datum baseAddress
       {
-         value = "150999056";
+         value = "0";
          type = "String";
       }
    }
@@ -113,11 +116,11 @@
          type = "boolean";
       }
    }
-   element timer.s1
+   element led_out.s1
    {
       datum baseAddress
       {
-         value = "0";
+         value = "150999056";
          type = "String";
       }
    }
@@ -162,10 +165,10 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="CSoC.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1644418836079" />
+ <parameter name="timeStamp" value="1644575526266" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
@@ -453,9 +456,9 @@
   <parameter name="cpuID_stored" value="0" />
   <parameter name="breakOffset" value="32" />
   <parameter name="userDefinedSettings" value="" />
-  <parameter name="resetSlave" value="None" />
+  <parameter name="resetSlave" value="sdram.s1" />
   <parameter name="mmu_TLBMissExcSlave" value="" />
-  <parameter name="exceptionSlave" value="None" />
+  <parameter name="exceptionSlave" value="sdram.s1" />
   <parameter name="breakSlave">cpu.jtag_debug_module</parameter>
   <parameter name="setting_perfCounterWidth" value="32" />
   <parameter name="setting_interruptControllerType" value="Internal" />

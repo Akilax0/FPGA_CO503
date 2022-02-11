@@ -3,19 +3,18 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="191" />
+   <connections preferredWidth="47" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="547" />
-   <clocksource preferredWidth="546" />
-   <frequency preferredWidth="531" />
+   <clockname preferredWidth="476" />
+   <clocksource preferredWidth="474" />
+   <frequency preferredWidth="462" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/Bridges/DMA,Library,Library/Bridges,Project,Library/Bridges/Memory-Mapped,Library/Bridges/Streaming" />
- <window width="1938" height="1048" x="-9" y="-9" />
+ <library expandedCategories="Library,Project" />
+ <window width="1726" height="928" x="-231" y="75" />
  <hdlexample language="VERILOG" />
 </preferences>
