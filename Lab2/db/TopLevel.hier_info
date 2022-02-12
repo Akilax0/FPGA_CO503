@@ -1,0 +1,12 @@
+|TopLevel
+LED[0] <= <GND>
+LED[1] <= <GND>
+LED[2] <= <GND>
+LED[3] <= <GND>
+LED[4] <= <GND>
+LED[5] <= <GND>
+LED[6] <= <GND>
+LED[7] <= <GND>
+INPUT_CLOCK => ~NO_FANOUT~
+
+
