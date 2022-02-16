@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 12.1 Build 177 11/07/2012 SJ Full Version"
 
--- DATE "01/26/2022 16:50:25"
+-- DATE "02/15/2022 13:41:00"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -3764,11 +3764,6 @@ SIGNAL \inst1|cpu_jtag_debug_module_translator|wait_latency_counter\ : std_logic
 SIGNAL \inst1|led_out_s1_translator|wait_latency_counter\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \inst1|cmd_xbar_mux|saved_grant\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \inst1|crosser|clock_xer|out_data_buffer\ : std_logic_vector(108 DOWNTO 0);
-SIGNAL \inst1|cpu|ALT_INV_M_wr_dst_reg~q\ : std_logic;
-SIGNAL \inst1|cpu|ALT_INV_E_iw\ : std_logic_vector(4 DOWNTO 4);
-SIGNAL \inst1|cpu|ALT_INV_M_shift_rot_stall~q\ : std_logic;
-SIGNAL \inst1|cpu|ALT_INV_E_src2_hazard_M~q\ : std_logic;
-SIGNAL \inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_jtag_debug_module_wrapper|SoC_cpu_jtag_debug_module_phy|ALT_INV_virtual_state_sdr~0_combout\ : std_logic;
 SIGNAL \inst1|sdram_control|ALT_INV_Selector22~1_combout\ : std_logic;
 SIGNAL \inst1|sdram_control|ALT_INV_Selector20~0_combout\ : std_logic;
 SIGNAL \inst1|sdram_control|ALT_INV_Selector19~3_combout\ : std_logic;
@@ -3815,6 +3810,11 @@ SIGNAL \ALT_INV_altera_internal_jtag~TCKUTAPclkctrl_outclk\ : std_logic;
 SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\ : std_logic_vector(8 DOWNTO 3);
 SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|ALT_INV_clr_reg~q\ : std_logic;
 SIGNAL \ALT_INV_altera_internal_jtag~TMSUTAP\ : std_logic;
+SIGNAL \inst1|cpu|ALT_INV_M_wr_dst_reg~q\ : std_logic;
+SIGNAL \inst1|cpu|ALT_INV_E_iw\ : std_logic_vector(4 DOWNTO 4);
+SIGNAL \inst1|cpu|ALT_INV_M_shift_rot_stall~q\ : std_logic;
+SIGNAL \inst1|cpu|ALT_INV_E_src2_hazard_M~q\ : std_logic;
+SIGNAL \inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_jtag_debug_module_wrapper|SoC_cpu_jtag_debug_module_phy|ALT_INV_virtual_state_sdr~0_combout\ : std_logic;
 
 BEGIN
 
@@ -4298,11 +4298,6 @@ ww_devpor <= devpor;
 \inst1|rst_controller_002|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \inst1|rst_controller_002|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain_out~q\);
 
 \inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_nios2_oci_debug|resetrequest~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_nios2_oci_debug|resetrequest~q\);
-\inst1|cpu|ALT_INV_M_wr_dst_reg~q\ <= NOT \inst1|cpu|M_wr_dst_reg~q\;
-\inst1|cpu|ALT_INV_E_iw\(4) <= NOT \inst1|cpu|E_iw\(4);
-\inst1|cpu|ALT_INV_M_shift_rot_stall~q\ <= NOT \inst1|cpu|M_shift_rot_stall~q\;
-\inst1|cpu|ALT_INV_E_src2_hazard_M~q\ <= NOT \inst1|cpu|E_src2_hazard_M~q\;
-\inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_jtag_debug_module_wrapper|SoC_cpu_jtag_debug_module_phy|ALT_INV_virtual_state_sdr~0_combout\ <= NOT \inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_jtag_debug_module_wrapper|SoC_cpu_jtag_debug_module_phy|virtual_state_sdr~0_combout\;
 \inst1|sdram_control|ALT_INV_Selector22~1_combout\ <= NOT \inst1|sdram_control|Selector22~1_combout\;
 \inst1|sdram_control|ALT_INV_Selector20~0_combout\ <= NOT \inst1|sdram_control|Selector20~0_combout\;
 \inst1|sdram_control|ALT_INV_Selector19~3_combout\ <= NOT \inst1|sdram_control|Selector19~3_combout\;
@@ -4351,6 +4346,11 @@ ww_devpor <= devpor;
 \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|ALT_INV_clr_reg~q\ <= NOT \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|clr_reg~q\;
 \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|ALT_INV_state\(4) <= NOT \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\(4);
 \ALT_INV_altera_internal_jtag~TMSUTAP\ <= NOT \altera_internal_jtag~TMSUTAP\;
+\inst1|cpu|ALT_INV_M_wr_dst_reg~q\ <= NOT \inst1|cpu|M_wr_dst_reg~q\;
+\inst1|cpu|ALT_INV_E_iw\(4) <= NOT \inst1|cpu|E_iw\(4);
+\inst1|cpu|ALT_INV_M_shift_rot_stall~q\ <= NOT \inst1|cpu|M_shift_rot_stall~q\;
+\inst1|cpu|ALT_INV_E_src2_hazard_M~q\ <= NOT \inst1|cpu|E_src2_hazard_M~q\;
+\inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_jtag_debug_module_wrapper|SoC_cpu_jtag_debug_module_phy|ALT_INV_virtual_state_sdr~0_combout\ <= NOT \inst1|cpu|the_SoC_cpu_nios2_oci|the_SoC_cpu_jtag_debug_module_wrapper|SoC_cpu_jtag_debug_module_phy|virtual_state_sdr~0_combout\;
 
 -- Location: PLL_1
 \inst1|pll|sd1|pll7\ : cycloneive_pll

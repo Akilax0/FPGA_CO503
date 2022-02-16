@@ -1,5 +1,5 @@
 Flow report for TopLevel
-Wed Jan 26 16:50:28 2022
+Tue Feb 15 13:41:14 2022
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Flow Summary                                                                   ;
 +------------------------------------+-------------------------------------------+
-; Flow Status                        ; Successful - Wed Jan 26 16:50:28 2022     ;
+; Flow Status                        ; Successful - Tue Feb 15 13:41:14 2022     ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; TopLevel                                  ;
 ; Top-level Entity Name              ; TopLevel                                  ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/26/2022 16:49:07 ;
+; Start date & time ; 02/15/2022 13:36:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TopLevel            ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------+---------------+------------------------------------------+----------------+
 ; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name                              ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------+---------------+------------------------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 91758403330.164319594600584                           ; --            ; --                                       ; --             ;
+; COMPILER_SIGNATURE_ID               ; 963355101707.164491241506952                          ; --            ; --                                       ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                  ; --            ; --                                       ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                ; <None>        ; --                                       ; --             ;
 ; IP_TOOL_ENV                         ; qsys                                                  ; --            ; SoC                                      ; --             ;
@@ -200,12 +200,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:20     ; 1.0                     ; 462 MB              ; 00:00:14                           ;
-; Fitter                    ; 00:00:38     ; 2.0                     ; 756 MB              ; 00:00:41                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 392 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 456 MB              ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 386 MB              ; 00:00:04                           ;
-; Total                     ; 00:01:15     ; --                      ; --                  ; 00:01:09                           ;
+; Analysis & Synthesis      ; 00:00:58     ; 1.0                     ; 471 MB              ; 00:00:45                           ;
+; Fitter                    ; 00:02:03     ; 1.9                     ; 732 MB              ; 00:02:19                           ;
+; Assembler                 ; 00:00:25     ; 1.0                     ; 403 MB              ; 00:00:22                           ;
+; TimeQuest Timing Analyzer ; 00:00:18     ; 1.1                     ; 463 MB              ; 00:00:16                           ;
+; EDA Netlist Writer        ; 00:00:18     ; 1.0                     ; 385 MB              ; 00:00:15                           ;
+; Total                     ; 00:04:02     ; --                      ; --                  ; 00:03:57                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
