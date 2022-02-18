@@ -31,20 +31,20 @@
 
 module SoC_addr_router_002_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 0,
-               DEFAULT_DESTID = 0 
+     parameter DEFAULT_CHANNEL = 2,
+               DEFAULT_DESTID = 2 
    )
-  (output [68 - 68 : 0] default_destination_id,
-   output [2-1 : 0] default_src_channel
+  (output [70 - 69 : 0] default_destination_id,
+   output [3-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[68 - 68 : 0];
+    DEFAULT_DESTID[70 - 69 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
     else
-      assign default_src_channel = 2'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 3'b1 << DEFAULT_CHANNEL;
   end
   endgenerate
 
@@ -63,7 +63,7 @@ module SoC_addr_router_002
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [79-1 : 0]    sink_data,
+    input  [81-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -72,8 +72,8 @@ module SoC_addr_router_002
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [79-1    : 0] src_data,
-    output reg [2-1 : 0] src_channel,
+    output reg [81-1    : 0] src_data,
+    output reg [3-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -84,10 +84,10 @@ module SoC_addr_router_002
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 45;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 68;
-    localparam PKT_DEST_ID_L = 68;
-    localparam ST_DATA_W = 79;
-    localparam ST_CHANNEL_W = 2;
+    localparam PKT_DEST_ID_H = 70;
+    localparam PKT_DEST_ID_L = 69;
+    localparam ST_DATA_W = 81;
+    localparam ST_CHANNEL_W = 3;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 48;
@@ -104,13 +104,14 @@ module SoC_addr_router_002
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(64'h20 - 64'h0);
-    localparam PAD1 = log2ceil(64'h28 - 64'h20);
+    localparam PAD1 = log2ceil(64'h40 - 64'h20);
+    localparam PAD2 = log2ceil(64'h48 - 64'h40);
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h28;
+    localparam ADDR_RANGE = 64'h48;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -129,7 +130,7 @@ module SoC_addr_router_002
     assign src_endofpacket   = sink_endofpacket;
 
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [2-1 : 0] default_src_channel;
+    wire [3-1 : 0] default_src_channel;
 
 
 
@@ -150,14 +151,20 @@ module SoC_addr_router_002
         // --------------------------------------------------
 
         // ( 0x0 .. 0x20 )
-        if ( {address[RG:PAD0],{PAD0{1'b0}}} == 6'h0 ) begin
-            src_channel = 2'b01;
+        if ( {address[RG:PAD0],{PAD0{1'b0}}} == 7'h0 ) begin
+            src_channel = 3'b100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+        end
+
+        // ( 0x20 .. 0x40 )
+        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 7'h20 ) begin
+            src_channel = 3'b001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
         end
 
-        // ( 0x20 .. 0x28 )
-        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 6'h20 ) begin
-            src_channel = 2'b10;
+        // ( 0x40 .. 0x48 )
+        if ( {address[RG:PAD2],{PAD2{1'b0}}} == 7'h40 ) begin
+            src_channel = 3'b010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
         end
 
