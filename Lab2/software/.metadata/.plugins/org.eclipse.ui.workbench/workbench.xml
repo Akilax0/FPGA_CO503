@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="31" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="2941" y="-15">
+<window height="768" maximized="true" width="1024" x="278" y="-17">
 <fastViewData fastViewLocation="1024"/>
 <intro standby="true"/>
 <perspectiveBar>
@@ -23,40 +23,20 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1645181201185" focus="true" label="Workspace - Nios II">
+<page aggregateWorkingSetId="Aggregate for window 1645384986584" focus="true" label="Workspace - Nios II">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="crc_main.c" partName="crc_main.c" path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc/crc_main.c" title="crc_main.c" tooltip="crc/crc_main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc/crc_main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3912" selectionTopPixel="810"/>
-</editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="ci_crc.c" partName="ci_crc.c" path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc/ci_crc.c" title="ci_crc.c" tooltip="crc/ci_crc.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc/ci_crc.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3344" selectionTopPixel="1000"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ci_crc.h" partName="ci_crc.h" path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc/ci_crc.h" title="ci_crc.h" tooltip="crc/ci_crc.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc/ci_crc.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="420"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" partName="system.h" path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/system.h" title="system.h" tooltip="crc_bsp/system.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc_bsp/system.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="26" selectionOffset="4106" selectionTopPixel="2369"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="altera_avalon_timer_ts.c" partName="altera_avalon_timer_ts.c" path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/drivers/src/altera_avalon_timer_ts.c" title="altera_avalon_timer_ts.c" tooltip="crc_bsp/drivers/src/altera_avalon_timer_ts.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc_bsp/drivers/src/altera_avalon_timer_ts.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="29" selectionOffset="4900" selectionTopPixel="1350"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="3449" selectionTopPixel="913"/>
 </editor>
 </editors>
 <views>
@@ -64,19 +44,10 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
-<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
-<viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
-<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-</viewState>
-</view>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="120" org.eclipse.ui.ide.markerType="120" org.eclipse.ui.ide.pathField="160" org.eclipse.ui.ide.resourceField="120" org.eclipse.ui.ide.severityAndDescriptionField="485"/>
+<columnWidths org.eclipse.ui.ide.locationField="120" org.eclipse.ui.ide.markerType="120" org.eclipse.ui.ide.pathField="160" org.eclipse.ui.ide.resourceField="120" org.eclipse.ui.ide.severityAndDescriptionField="400"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -182,7 +153,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1e91259" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@38c403" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
 <folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="1">
 <page content="org.eclipse.ui.internal.introview" label="Welcome"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
@@ -261,8 +232,8 @@
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.internal.introview"/>
-<view id="org.eclipse.search.ui.views.SearchView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -277,21 +248,19 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1ad4242" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
-<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@a3c7b1" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
+<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="2">
 <page content="org.eclipse.ui.internal.introview" label="Welcome"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.3137119" ratioLeft="453" ratioRight="991" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.5216285" ratioLeft="410" ratioRight="376" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<info part="org.eclipse.ui.editorss" ratio="0.249499" ratioLeft="249" ratioRight="749" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.7492447" ratioLeft="496" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -307,9 +276,11 @@
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.74899864" ratioLeft="561" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 </mainWindow>
@@ -319,74 +290,10 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc/crc_main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc/ci_crc.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc/ci_crc.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc_bsp/system.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc_bsp/drivers/src/altera_avalon_timer_ts.c"/>
 </editors>
-<item historyLabel="crc_main.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position info="not_deleted" x="3766" y="18"/>
-</item>
-<item historyLabel="crc_main.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position info="not_deleted" x="3766" y="18"/>
-</item>
-<item historyLabel="crc_main.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="crc_main.c" index="0">
-<position info="not_deleted" x="3974" y="0"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position info="not_deleted" x="2802" y="8"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position info="not_deleted" x="3766" y="18"/>
-</item>
-<item historyLabel="ci_crc.h" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position info="not_deleted" x="3344" y="0"/>
-</item>
-<item historyLabel="crc_main.c" index="0">
-<position info="not_deleted" x="3912" y="0"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position/>
-</item>
-<item historyLabel="crc_main.c" index="0">
-<position info="not_deleted" x="3912" y="0"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position info="not_deleted" x="3344" y="0"/>
-</item>
-<item historyLabel="system.h" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="system.h" index="3">
-<position info="not_deleted" x="4106" y="26"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position info="not_deleted" x="3344" y="0"/>
-</item>
-<item historyLabel="altera_avalon_timer_ts.c" index="4">
-<position info="not_deleted" x="4900" y="29"/>
-</item>
-<item historyLabel="ci_crc.c" index="1">
-<position/>
-</item>
-<item historyLabel="crc_main.c" index="0">
-<position info="not_deleted" x="3912" y="0"/>
-</item>
-<item active="true" historyLabel="ci_crc.c" index="1">
-<position/>
+<item active="true" historyLabel="ci_crc.c" index="0">
+<position info="not_deleted" x="3449" y="5"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -406,20 +313,8 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altera_avalon_timer_ts.c" tooltip="crc_bsp/drivers/src/altera_avalon_timer_ts.c">
-<persistable path="/crc_bsp/drivers/src/altera_avalon_timer_ts.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="crc_bsp/system.h">
-<persistable path="/crc_bsp/system.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ci_crc.h" tooltip="crc/ci_crc.h">
-<persistable path="/crc/ci_crc.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ci_crc.c" tooltip="crc/ci_crc.c">
 <persistable path="/crc/ci_crc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="crc_main.c" tooltip="crc/crc_main.c">
-<persistable path="/crc/crc_main.c"/>
 </file>
 </mruList>
 </workbench>

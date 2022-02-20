@@ -31,8 +31,8 @@
 
 module SoC_addr_router_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 0,
-               DEFAULT_DESTID = 0 
+     parameter DEFAULT_CHANNEL = 1,
+               DEFAULT_DESTID = 1 
    )
   (output [90 - 88 : 0] default_destination_id,
    output [6-1 : 0] default_src_channel
@@ -151,14 +151,14 @@ module SoC_addr_router
 
         // ( 0x0 .. 0x8000000 )
         if ( {address[RG:PAD0],{PAD0{1'b0}}} == 28'h0 ) begin
-            src_channel = 6'b01;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+            src_channel = 6'b10;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
         end
 
         // ( 0x9000800 .. 0x9001000 )
         if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h9000800 ) begin
-            src_channel = 6'b10;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+            src_channel = 6'b01;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
         end
 
 end

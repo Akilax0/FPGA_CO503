@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
  *
- * Generated: Fri Feb 18 16:19:28 IST 2022
+ * Generated: Mon Feb 21 00:55:21 IST 2022
  */
 
 /*
@@ -67,8 +67,8 @@
 
 #define RESET_REGION_BASE 0x0
 #define RESET_REGION_SPAN 32
-#define SDRAM_REGION_BASE 0x20
-#define SDRAM_REGION_SPAN 134217696
+#define SDRAM_CONTROL_REGION_BASE 0x20
+#define SDRAM_CONTROL_REGION_SPAN 134217696
 
 
 /*
@@ -76,11 +76,11 @@
  *
  */
 
-#define ALT_EXCEPTIONS_DEVICE SDRAM
-#define ALT_RESET_DEVICE SDRAM
-#define ALT_RODATA_DEVICE SDRAM
-#define ALT_RWDATA_DEVICE SDRAM
-#define ALT_TEXT_DEVICE SDRAM
+#define ALT_EXCEPTIONS_DEVICE SDRAM_CONTROL
+#define ALT_RESET_DEVICE SDRAM_CONTROL
+#define ALT_RODATA_DEVICE SDRAM_CONTROL
+#define ALT_RWDATA_DEVICE SDRAM_CONTROL
+#define ALT_TEXT_DEVICE SDRAM_CONTROL
 
 
 /*

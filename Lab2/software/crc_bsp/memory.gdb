@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
 # SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
 #
-# Generated: Fri Feb 18 16:19:28 IST 2022
+# Generated: Mon Feb 21 00:55:21 IST 2022
 
 # DO NOT MODIFY THIS FILE
 #
@@ -46,5 +46,5 @@
 # The cache attribute is specified which improves GDB performance
 # by allowing GDB to cache memory contents on the host.
 
-# sdram
+# sdram_control
 memory 0x0 0x8000000 cache

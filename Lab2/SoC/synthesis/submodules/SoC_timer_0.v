@@ -18,19 +18,19 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module SoC_high_resolution_timer (
-                                   // inputs:
-                                    address,
-                                    chipselect,
-                                    clk,
-                                    reset_n,
-                                    write_n,
-                                    writedata,
+module SoC_timer_0 (
+                     // inputs:
+                      address,
+                      chipselect,
+                      clk,
+                      reset_n,
+                      write_n,
+                      writedata,
 
-                                   // outputs:
-                                    irq,
-                                    readdata
-                                 )
+                     // outputs:
+                      irq,
+                      readdata
+                   )
 ;
 
   output           irq;

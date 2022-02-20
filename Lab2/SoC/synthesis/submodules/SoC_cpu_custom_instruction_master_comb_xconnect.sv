@@ -24,7 +24,7 @@
 `timescale 1 ns / 1 ns
 
 
-module SoC_cpu_custom_instruction_master_multi_xconnect
+module SoC_cpu_custom_instruction_master_comb_xconnect
 (
     // -------------------
     // Custom instruction masters
@@ -41,21 +41,11 @@ module SoC_cpu_custom_instruction_master_multi_xconnect
     output [ 4 : 0] ci_master0_c,
     output [31 : 0] ci_master0_ipending,
     output          ci_master0_estatus,
-    output          ci_master0_clk,   
-    output          ci_master0_clken,
-    output          ci_master0_reset, 
-    output          ci_master0_start,
-    input           ci_master0_done,
 
 
     // -------------------
     // Custom instruction slave
     // -------------------
-    input           ci_slave_clk,   
-    input           ci_slave_clken,
-    input           ci_slave_reset, 
-    input           ci_slave_start,
-    output          ci_slave_done,
     input  [31 : 0] ci_slave_dataa,
     input  [31 : 0] ci_slave_datab,
     output [31 : 0] ci_slave_result,
@@ -84,9 +74,6 @@ module SoC_cpu_custom_instruction_master_multi_xconnect
     assign  ci_master0_c        = ci_slave_c;
     assign  ci_master0_ipending = ci_slave_ipending;
     assign  ci_master0_estatus  = ci_slave_estatus;
-    assign  ci_master0_clk      = ci_slave_clk;
-    assign  ci_master0_clken    = ci_slave_clken;
-    assign  ci_master0_reset    = ci_slave_reset;
 
 
     // -------------------------------------------------------
@@ -98,7 +85,6 @@ module SoC_cpu_custom_instruction_master_multi_xconnect
     assign ci_master0_readra  = (select0 && ci_slave_readra);
     assign ci_master0_readrb  = (select0 && ci_slave_readrb);
     assign ci_master0_writerc = (select0 && ci_slave_writerc);
-    assign ci_master0_start   = (select0 && ci_slave_start);
 
 
     // -------------------------------------------------------
@@ -108,8 +94,6 @@ module SoC_cpu_custom_instruction_master_multi_xconnect
     assign ci_slave_result = {32{ select0 }} & ci_master0_result
     ;
 
-    assign ci_slave_done = select0 & ci_master0_done
-    ;
 
 endmodule
 

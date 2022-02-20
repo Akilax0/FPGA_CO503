@@ -2,7 +2,7 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1647371169;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1647371169.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1001656143;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1104658845">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.828736748;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.828736748.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.1724207523;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1081993610">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\i686-pc-cygwin"/>
@@ -223,7 +223,7 @@
 <definedSymbol symbol="__unix=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1647371169;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1647371169.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.647999794;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1939637392">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.828736748;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.828736748.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.168021362;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.182438101">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>

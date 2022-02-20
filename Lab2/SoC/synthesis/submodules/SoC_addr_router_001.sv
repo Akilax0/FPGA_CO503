@@ -31,8 +31,8 @@
 
 module SoC_addr_router_001_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 0,
-               DEFAULT_DESTID = 0 
+     parameter DEFAULT_CHANNEL = 1,
+               DEFAULT_DESTID = 1 
    )
   (output [90 - 88 : 0] default_destination_id,
    output [6-1 : 0] default_src_channel
@@ -155,20 +155,20 @@ module SoC_addr_router_001
 
         // ( 0x0 .. 0x8000000 )
         if ( {address[RG:PAD0],{PAD0{1'b0}}} == 28'h0 ) begin
-            src_channel = 6'b000001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+            src_channel = 6'b000010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
         end
 
         // ( 0x8000000 .. 0x8000400 )
         if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h8000000 ) begin
-            src_channel = 6'b001000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+            src_channel = 6'b100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
         end
 
         // ( 0x9000800 .. 0x9001000 )
         if ( {address[RG:PAD2],{PAD2{1'b0}}} == 28'h9000800 ) begin
-            src_channel = 6'b000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+            src_channel = 6'b000001;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
         end
 
         // ( 0x9001000 .. 0x9001010 )
@@ -185,8 +185,8 @@ module SoC_addr_router_001
 
         // ( 0x9001020 .. 0x9001028 )
         if ( {address[RG:PAD5],{PAD5{1'b0}}} == 28'h9001020 ) begin
-            src_channel = 6'b100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
+            src_channel = 6'b001000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
         end
 
 end

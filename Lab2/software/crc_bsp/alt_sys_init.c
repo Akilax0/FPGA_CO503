@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
  *
- * Generated: Fri Feb 18 16:19:28 IST 2022
+ * Generated: Mon Feb 21 01:04:13 IST 2022
  */
 
 /*
@@ -70,7 +70,7 @@
 ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( CPU, cpu);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
-ALTERA_AVALON_TIMER_INSTANCE ( HIGH_RESOLUTION_TIMER, high_resolution_timer);
+ALTERA_AVALON_TIMER_INSTANCE ( HIGH_FREQ_TIMER, high_freq_timer);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER, timer);
 
 /*
@@ -94,7 +94,7 @@ void alt_irq_init ( const void* base )
 
 void alt_sys_init( void )
 {
-    ALTERA_AVALON_TIMER_INIT ( HIGH_RESOLUTION_TIMER, high_resolution_timer);
+    ALTERA_AVALON_TIMER_INIT ( HIGH_FREQ_TIMER, high_freq_timer);
     ALTERA_AVALON_TIMER_INIT ( TIMER, timer);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);

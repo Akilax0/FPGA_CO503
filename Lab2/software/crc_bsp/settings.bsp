@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Feb 18, 2022 4:20:55 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1645181455534</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Feb 21, 2022 1:06:57 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1645385817342</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab2\software\crc_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab2\SoC.sopcinfo</SopcDesignFile>
@@ -14,7 +14,7 @@
                 <SettingName>hal.sys_clk_timer</SettingName>
                 <Identifier>ALT_SYS_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>high_resolution_timer</Value>
+                <Value>timer</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of the system clock timer device. This device provides a periodic interrupt ("tick") and is typically required for RTOS use. This setting defines the value of ALT_SYS_CLK in system.h.</Description>
@@ -26,7 +26,7 @@
                 <SettingName>hal.timestamp_timer</SettingName>
                 <Identifier>ALT_TIMESTAMP_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>high_resolution_timer</Value>
+                <Value>high_freq_timer</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of timestamp timer device. This device is used by Altera HAL timestamp drivers for high-resolution time measurement. This setting defines the value of ALT_TIMESTAMP_CLK in system.h.</Description>
@@ -146,7 +146,7 @@
                 <SettingName>hal.linker.exception_stack_memory_region_name</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>sdram</Value>
+                <Value>sdram_control</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'exception_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'exception_stack' memory region.</Description>
@@ -182,7 +182,7 @@
                 <SettingName>hal.linker.interrupt_stack_memory_region_name</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>sdram</Value>
+                <Value>sdram_control</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'interrupt_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'interrupt_stack' memory region.</Description>
@@ -851,13 +851,13 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>sdram</slaveDescriptor>
+                <slaveDescriptor>sdram_control</slaveDescriptor>
                 <addressRange>0x00000000 - 0x07FFFFFF</addressRange>
                 <addressSpan>134217728</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>high_resolution_timer</slaveDescriptor>
+                <slaveDescriptor>high_freq_timer</slaveDescriptor>
                 <addressRange>0x08000000 - 0x0800001F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
@@ -875,13 +875,13 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pll</slaveDescriptor>
+                <slaveDescriptor>led_out</slaveDescriptor>
                 <addressRange>0x09001000 - 0x0900100F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>led_out</slaveDescriptor>
+                <slaveDescriptor>PLL</slaveDescriptor>
                 <addressRange>0x09001010 - 0x0900101F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
@@ -894,26 +894,26 @@
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>sdram_control</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>sdram_control</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rwdata</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>sdram_control</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.bss</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>sdram_control</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.heap</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>sdram_control</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>sdram</regionName>
+                <regionName>sdram_control</regionName>
         </LinkerSection>
 </sch:Settings>

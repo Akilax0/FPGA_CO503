@@ -18,21 +18,21 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module SoC_sdram_input_efifo_module (
-                                      // inputs:
-                                       clk,
-                                       rd,
-                                       reset_n,
-                                       wr,
-                                       wr_data,
+module SoC_sdram_control_input_efifo_module (
+                                              // inputs:
+                                               clk,
+                                               rd,
+                                               reset_n,
+                                               wr,
+                                               wr_data,
 
-                                      // outputs:
-                                       almost_empty,
-                                       almost_full,
-                                       empty,
-                                       full,
-                                       rd_data
-                                    )
+                                              // outputs:
+                                               almost_empty,
+                                               almost_full,
+                                               empty,
+                                               full,
+                                               rd_data
+                                            )
 ;
 
   output           almost_empty;
@@ -155,31 +155,31 @@ endmodule
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module SoC_sdram (
-                   // inputs:
-                    az_addr,
-                    az_be_n,
-                    az_cs,
-                    az_data,
-                    az_rd_n,
-                    az_wr_n,
-                    clk,
-                    reset_n,
+module SoC_sdram_control (
+                           // inputs:
+                            az_addr,
+                            az_be_n,
+                            az_cs,
+                            az_data,
+                            az_rd_n,
+                            az_wr_n,
+                            clk,
+                            reset_n,
 
-                   // outputs:
-                    za_data,
-                    za_valid,
-                    za_waitrequest,
-                    zs_addr,
-                    zs_ba,
-                    zs_cas_n,
-                    zs_cke,
-                    zs_cs_n,
-                    zs_dq,
-                    zs_dqm,
-                    zs_ras_n,
-                    zs_we_n
-                 )
+                           // outputs:
+                            za_data,
+                            za_valid,
+                            za_waitrequest,
+                            zs_addr,
+                            zs_ba,
+                            zs_cas_n,
+                            zs_cke,
+                            zs_cs_n,
+                            zs_dq,
+                            zs_dqm,
+                            zs_ras_n,
+                            zs_we_n
+                         )
 ;
 
   output  [ 31: 0] za_data;
@@ -281,7 +281,7 @@ module SoC_sdram (
   assign cs_n = f_select ? f_cs_n : active_cs_n;
   assign csn_decode = cs_n;
   assign {f_rnw, f_addr, f_dqm, f_data} = fifo_read_data;
-  SoC_sdram_input_efifo_module the_SoC_sdram_input_efifo_module
+  SoC_sdram_control_input_efifo_module the_SoC_sdram_control_input_efifo_module
     (
       .almost_empty (almost_empty),
       .almost_full  (almost_full),
