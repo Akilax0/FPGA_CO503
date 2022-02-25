@@ -2,8 +2,11 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1854336322;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1854336322.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.2104043724;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1148075767">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.563792038;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.563792038.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.78776650;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.362541579">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/HAL/inc"/>
+<includePath path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/"/>
+<includePath path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/drivers/inc"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\i686-pc-cygwin"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\backward"/>
@@ -221,10 +224,17 @@
 <definedSymbol symbol="unix=1"/>
 <definedSymbol symbol="__unix__=1"/>
 <definedSymbol symbol="__unix=1"/>
+<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
+<definedSymbol symbol="__hal__=1"/>
+<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
+<definedSymbol symbol="ALT_SINGLE_THREADED=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1854336322;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1854336322.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.632925304;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1659627256">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.563792038;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.563792038.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.867545478;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1228027127">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/HAL/inc"/>
+<includePath path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/"/>
+<includePath path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/drivers/inc"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
 <includePath path="C:\altera\12.1\quartus\bin\cygwin\usr\include"/>
@@ -432,6 +442,10 @@
 <definedSymbol symbol="unix=1"/>
 <definedSymbol symbol="__unix__=1"/>
 <definedSymbol symbol="__unix=1"/>
+<definedSymbol symbol="SYSTEM_BUS_WIDTH=32"/>
+<definedSymbol symbol="__hal__=1"/>
+<definedSymbol symbol="ALT_NO_INSTRUCTION_EMULATION=1"/>
+<definedSymbol symbol="ALT_SINGLE_THREADED=1"/>
 </collector>
 </instance>
 </scannerInfo>

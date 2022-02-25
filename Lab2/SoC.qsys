@@ -54,6 +54,11 @@
    }
    element sysid.control_slave
    {
+      datum _lockedAddress
+      {
+         value = "0";
+         type = "boolean";
+      }
       datum baseAddress
       {
          value = "64";
@@ -132,6 +137,14 @@
          type = "String";
       }
    }
+   element sdram_control.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
    element led_out.s1
    {
       datum baseAddress
@@ -154,14 +167,6 @@
       {
          value = "0";
          type = "String";
-      }
-   }
-   element sdram_control.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
       }
    }
    element sdram_control
@@ -203,7 +208,7 @@
  <parameter name="projectName" value="JSoC.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1645385354274" />
+ <parameter name="timeStamp" value="1645782791889" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
@@ -796,14 +801,6 @@
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0020" />
  </connection>
- <connection
-   kind="avalon"
-   version="12.1"
-   start="mm_clock_crossing_bridge_0.m0"
-   end="sysid.control_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0040" />
- </connection>
  <connection kind="interrupt" version="12.1" start="cpu.d_irq" end="timer.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
@@ -860,4 +857,12 @@
    version="12.1"
    start="PLL.c0"
    end="CRC_Custom_Instruction_0.clock" />
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="mm_clock_crossing_bridge_0.m0"
+   end="sysid.control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0040" />
+ </connection>
 </system>

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
  *
- * Generated: Mon Feb 21 01:04:13 IST 2022
+ * Generated: Fri Feb 25 14:45:17 IST 2022
  */
 
 /*

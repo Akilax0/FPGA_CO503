@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
  *
- * Generated: Mon Feb 21 01:06:58 IST 2022
+ * Generated: Fri Feb 25 15:05:54 IST 2022
  */
 
 /*
@@ -325,7 +325,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1645385396
+#define SYSID_TIMESTAMP 1645781104
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
