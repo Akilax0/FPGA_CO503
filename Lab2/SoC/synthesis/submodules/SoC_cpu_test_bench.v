@@ -85,11 +85,11 @@ module SoC_cpu_test_bench (
   input   [ 31: 0] M_ienable_reg;
   input   [ 31: 0] M_ipending_reg;
   input   [ 31: 0] M_iw;
-  input   [ 27: 0] M_mem_baddr;
+  input   [ 19: 0] M_mem_baddr;
   input   [  3: 0] M_mem_byte_en;
   input            M_op_hbreak;
   input            M_op_intr;
-  input   [ 27: 0] M_pcb;
+  input   [ 19: 0] M_pcb;
   input   [ 31: 0] M_st_data;
   input   [ 31: 0] M_status_reg;
   input            M_valid;
@@ -99,24 +99,24 @@ module SoC_cpu_test_bench (
   input   [ 31: 0] W_iw;
   input   [  5: 0] W_iw_op;
   input   [  5: 0] W_iw_opx;
-  input   [ 27: 0] W_pcb;
+  input   [ 19: 0] W_pcb;
   input            W_valid;
-  input   [191: 0] W_vinst;
+  input   [ 95: 0] W_vinst;
   input   [ 31: 0] W_wr_data;
   input            W_wr_dst_reg;
   input            clk;
-  input   [ 27: 0] d_address;
+  input   [ 19: 0] d_address;
   input   [  3: 0] d_byteenable;
   input            d_read;
   input            d_write;
-  input   [ 27: 0] i_address;
+  input   [ 19: 0] i_address;
   input            i_read;
   input            i_readdatavalid;
   input            reset_n;
 
   wire             E_src1_eq_src2;
   wire    [ 32: 0] E_src1_src2_fast_cmp;
-  reg     [ 27: 0] M_target_pcb;
+  reg     [ 19: 0] M_target_pcb;
   wire    [ 31: 0] M_wr_data_filtered;
   wire             M_wr_data_unfiltered_0_is_x;
   wire             M_wr_data_unfiltered_10_is_x;
@@ -178,7 +178,7 @@ module SoC_cpu_test_bench (
   wire             W_op_cmpltui;
   wire             W_op_cmpne;
   wire             W_op_cmpnei;
-  wire             W_op_crc_custom_instruction_0;
+  wire             W_op_crc_custom_0;
   wire             W_op_crst;
   wire             W_op_custom;
   wire             W_op_div;
@@ -406,7 +406,7 @@ module SoC_cpu_test_bench (
   assign W_op_rsvx56 = W_op_opx & (W_iw_opx == 56);
   assign W_op_rsvx60 = W_op_opx & (W_iw_opx == 60);
   assign W_op_rsvx63 = W_op_opx & (W_iw_opx == 63);
-  assign W_op_crc_custom_instruction_0 = W_op_custom & 1'b1;
+  assign W_op_crc_custom_0 = W_op_custom & 1'b1;
   assign W_op_opx = W_iw_op == 58;
   assign W_op_custom = W_iw_op == 50;
   always @(posedge clk or negedge reset_n)
@@ -414,7 +414,7 @@ module SoC_cpu_test_bench (
       if (reset_n == 0)
           M_target_pcb <= 0;
       else if (M_en)
-          M_target_pcb <= E_src1[27 : 0];
+          M_target_pcb <= E_src1[19 : 0];
     end
 
 

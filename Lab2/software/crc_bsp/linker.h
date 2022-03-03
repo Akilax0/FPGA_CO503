@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/SoC.sopcinfo
  *
- * Generated: Fri Feb 25 14:45:17 IST 2022
+ * Generated: Thu Mar 03 10:45:58 IST 2022
  */
 
 /*
@@ -65,10 +65,10 @@
  *
  */
 
-#define RESET_REGION_BASE 0x0
+#define ONCHIP_MEM_REGION_BASE 0x40020
+#define ONCHIP_MEM_REGION_SPAN 262112
+#define RESET_REGION_BASE 0x40000
 #define RESET_REGION_SPAN 32
-#define SDRAM_CONTROL_REGION_BASE 0x20
-#define SDRAM_CONTROL_REGION_SPAN 134217696
 
 
 /*
@@ -76,11 +76,11 @@
  *
  */
 
-#define ALT_EXCEPTIONS_DEVICE SDRAM_CONTROL
-#define ALT_RESET_DEVICE SDRAM_CONTROL
-#define ALT_RODATA_DEVICE SDRAM_CONTROL
-#define ALT_RWDATA_DEVICE SDRAM_CONTROL
-#define ALT_TEXT_DEVICE SDRAM_CONTROL
+#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEM
+#define ALT_RESET_DEVICE ONCHIP_MEM
+#define ALT_RODATA_DEVICE ONCHIP_MEM
+#define ALT_RWDATA_DEVICE ONCHIP_MEM
+#define ALT_TEXT_DEVICE ONCHIP_MEM
 
 
 /*

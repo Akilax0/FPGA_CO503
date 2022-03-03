@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Feb 25, 2022 3:34:11 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1645783451432</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab2\software\crc_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Mar 3, 2022 10:54:45 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1646285085956</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab2_2\software\crc_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab2\SoC.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab2_2\SoC.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -14,7 +14,7 @@
                 <SettingName>hal.sys_clk_timer</SettingName>
                 <Identifier>ALT_SYS_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>timer</Value>
+                <Value>timer_0</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of the system clock timer device. This device provides a periodic interrupt ("tick") and is typically required for RTOS use. This setting defines the value of ALT_SYS_CLK in system.h.</Description>
@@ -26,7 +26,7 @@
                 <SettingName>hal.timestamp_timer</SettingName>
                 <Identifier>ALT_TIMESTAMP_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>high_freq_timer</Value>
+                <Value>high_res_timer</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of timestamp timer device. This device is used by Altera HAL timestamp drivers for high-resolution time measurement. This setting defines the value of ALT_TIMESTAMP_CLK in system.h.</Description>
@@ -146,7 +146,7 @@
                 <SettingName>hal.linker.exception_stack_memory_region_name</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>sdram_control</Value>
+                <Value>onchip_mem</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'exception_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'exception_stack' memory region.</Description>
@@ -182,7 +182,7 @@
                 <SettingName>hal.linker.interrupt_stack_memory_region_name</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>sdram_control</Value>
+                <Value>onchip_mem</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'interrupt_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'interrupt_stack' memory region.</Description>
@@ -851,69 +851,57 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>sdram_control</slaveDescriptor>
-                <addressRange>0x00000000 - 0x07FFFFFF</addressRange>
-                <addressSpan>134217728</addressSpan>
+                <slaveDescriptor>onchip_mem</slaveDescriptor>
+                <addressRange>0x00040000 - 0x0007FFFF</addressRange>
+                <addressSpan>262144</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>high_freq_timer</slaveDescriptor>
-                <addressRange>0x08000000 - 0x0800001F</addressRange>
+                <slaveDescriptor>high_res_timer</slaveDescriptor>
+                <addressRange>0x00081000 - 0x0008101F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>timer</slaveDescriptor>
-                <addressRange>0x08000020 - 0x0800003F</addressRange>
+                <slaveDescriptor>timer_0</slaveDescriptor>
+                <addressRange>0x00081020 - 0x0008103F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x08000040 - 0x08000047</addressRange>
+                <addressRange>0x00081040 - 0x00081047</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>led_out</slaveDescriptor>
-                <addressRange>0x09001000 - 0x0900100F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>PLL</slaveDescriptor>
-                <addressRange>0x09001010 - 0x0900101F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x09001020 - 0x09001027</addressRange>
+                <addressRange>0x00081048 - 0x0008104F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>sdram_control</regionName>
+                <regionName>onchip_mem</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>
-                <regionName>sdram_control</regionName>
+                <regionName>onchip_mem</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rwdata</sectionName>
-                <regionName>sdram_control</regionName>
+                <regionName>onchip_mem</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.bss</sectionName>
-                <regionName>sdram_control</regionName>
+                <regionName>onchip_mem</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.heap</sectionName>
-                <regionName>sdram_control</regionName>
+                <regionName>onchip_mem</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>sdram_control</regionName>
+                <regionName>onchip_mem</regionName>
         </LinkerSection>
 </sch:Settings>

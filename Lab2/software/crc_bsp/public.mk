@@ -87,11 +87,11 @@ ACDS_VERSION := 12.1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/TopLevel.jdi
+JDI_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/toplevel.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
+SOPCINFO_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/SoC.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -121,8 +121,8 @@ ELF_PATCH_FLAG  += --cpu_name $(CPU_NAME)
 ALT_CFLAGS += -mno-hw-div
 
 # Hardware Multiplier present. 
-# setting HARDWARE_MULTIPLY is false
-ALT_CFLAGS += -mno-hw-mul
+# setting HARDWARE_MULTIPLY is true
+ALT_CFLAGS += -mhw-mul
 
 # Hardware Mulx present. 
 # setting HARDWARE_MULX is false
@@ -151,14 +151,14 @@ SOPC_SYSID_FLAG += --id=0
 ELF_PATCH_FLAG  += --id 0
 
 # The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x8000040
-SOPC_SYSID_FLAG += --sidp=0x8000040
-ELF_PATCH_FLAG  += --sidp 0x8000040
+# setting SOPC_SYSID_BASE_ADDRESS is 0x81040
+SOPC_SYSID_FLAG += --sidp=0x81040
+ELF_PATCH_FLAG  += --sidp 0x81040
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1645781104
-SOPC_SYSID_FLAG += --timestamp=1645781104
-ELF_PATCH_FLAG  += --timestamp 1645781104
+# setting SOPC_TIMESTAMP is 1646284880
+SOPC_SYSID_FLAG += --timestamp=1646284880
+ELF_PATCH_FLAG  += --timestamp 1646284880
 
 # Small-footprint (polled mode) driver none 
 # setting altera_avalon_jtag_uart_driver.enable_small_driver is false

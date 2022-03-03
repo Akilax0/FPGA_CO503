@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/SoC.sopcinfo
  *
- * Generated: Fri Feb 25 14:45:17 IST 2022
+ * Generated: Thu Mar 03 10:45:58 IST 2022
  */
 
 /*
@@ -50,12 +50,12 @@
 
 MEMORY
 {
-    reset : ORIGIN = 0x0, LENGTH = 32
-    sdram_control : ORIGIN = 0x20, LENGTH = 134217696
+    reset : ORIGIN = 0x40000, LENGTH = 32
+    onchip_mem : ORIGIN = 0x40020, LENGTH = 262112
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_sdram_control = 0x0;
+__alt_mem_onchip_mem = 0x40000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -110,7 +110,7 @@ SECTIONS
         KEEP (*(.exceptions.exit));
         KEEP (*(.exceptions));
         PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
-    } > sdram_control
+    } > onchip_mem
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
@@ -206,7 +206,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > sdram_control = 0x3a880100 /* Nios II NOP instruction */
+    } > onchip_mem = 0x3a880100 /* Nios II NOP instruction */
 
     .rodata :
     {
@@ -216,7 +216,7 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > sdram_control
+    } > onchip_mem
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -250,7 +250,7 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > sdram_control
+    } > onchip_mem
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
@@ -281,7 +281,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > sdram_control
+    } > onchip_mem
 
     /*
      *
@@ -306,18 +306,18 @@ SECTIONS
      *
      */
 
-    .sdram_control LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
+    .onchip_mem LOADADDR (.bss) + SIZEOF (.bss) : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
     {
-        PROVIDE (_alt_partition_sdram_control_start = ABSOLUTE(.));
-        *(.sdram_control. sdram_control.*)
+        PROVIDE (_alt_partition_onchip_mem_start = ABSOLUTE(.));
+        *(.onchip_mem. onchip_mem.*)
         . = ALIGN(4);
-        PROVIDE (_alt_partition_sdram_control_end = ABSOLUTE(.));
+        PROVIDE (_alt_partition_onchip_mem_end = ABSOLUTE(.));
         _end = ABSOLUTE(.);
         end = ABSOLUTE(.);
         __alt_stack_base = ABSOLUTE(.);
-    } > sdram_control
+    } > onchip_mem
 
-    PROVIDE (_alt_partition_sdram_control_load_addr = LOADADDR(.sdram_control));
+    PROVIDE (_alt_partition_onchip_mem_load_addr = LOADADDR(.onchip_mem));
 
     /*
      * Stabs debugging sections.
@@ -366,7 +366,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x8000000;
+__alt_data_end = 0x80000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -382,4 +382,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x8000000 );
+PROVIDE( __alt_heap_limit    = 0x80000 );
