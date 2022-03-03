@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'cpu' in SOPC Builder design 'SoC'
-# SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/SoC.sopcinfo
+# SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
 #
-# Generated: Thu Mar 03 10:45:58 IST 2022
+# Generated: Thu Mar 03 11:29:36 IST 2022
 
 # DO NOT MODIFY THIS FILE
 #

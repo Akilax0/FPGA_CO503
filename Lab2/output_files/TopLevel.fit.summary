@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Mar 03 10:53:26 2022
+Fitter Status : Successful - Thu Mar 03 20:52:03 2022
 Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
 Revision Name : toplevel
 Top-level Entity Name : toplevel
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 3,203 / 114,480 ( 3 % )
-    Total combinational functions : 2,988 / 114,480 ( 3 % )
+Total logic elements : 3,206 / 114,480 ( 3 % )
+    Total combinational functions : 2,991 / 114,480 ( 3 % )
     Dedicated logic registers : 1,804 / 114,480 ( 2 % )
 Total registers : 1804
 Total pins : 1 / 529 ( < 1 % )

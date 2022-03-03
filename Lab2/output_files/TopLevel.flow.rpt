@@ -1,5 +1,5 @@
 Flow report for toplevel
-Thu Mar 03 10:53:48 2022
+Thu Mar 03 20:52:25 2022
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -38,15 +38,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Flow Summary                                                                   ;
 +------------------------------------+-------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 03 10:53:48 2022     ;
+; Flow Status                        ; Successful - Thu Mar 03 20:52:25 2022     ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; toplevel                                  ;
 ; Top-level Entity Name              ; toplevel                                  ;
 ; Family                             ; Cyclone IV E                              ;
 ; Device                             ; EP4CE115F29C7                             ;
 ; Timing Models                      ; Final                                     ;
-; Total logic elements               ; 3,203 / 114,480 ( 3 % )                   ;
-;     Total combinational functions  ; 2,988 / 114,480 ( 3 % )                   ;
+; Total logic elements               ; 3,206 / 114,480 ( 3 % )                   ;
+;     Total combinational functions  ; 2,991 / 114,480 ( 3 % )                   ;
 ;     Dedicated logic registers      ; 1,804 / 114,480 ( 2 % )                   ;
 ; Total registers                    ; 1804                                      ;
 ; Total pins                         ; 1 / 529 ( < 1 % )                         ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/03/2022 10:52:45 ;
+; Start date & time ; 03/03/2022 20:51:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; toplevel            ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------+---------------+--------------------------------------------------+----------------+
 ; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name                                      ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------+---------------+--------------------------------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 91771095748.164628496420320                           ; --            ; --                                               ; --             ;
+; COMPILER_SIGNATURE_ID               ; 91771095748.164632088121016                           ; --            ; --                                               ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                  ; --            ; --                                               ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                ; <None>        ; --                                               ; --             ;
 ; IP_TOOL_ENV                         ; qsys                                                  ; --            ; SoC                                              ; --             ;
@@ -173,7 +173,7 @@ applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                   ; --            ; --                                               ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --                                               ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                          ; --            ; --                                               ; --             ;
-; SLD_INFO                            ; QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1646284880 ; --            ; SoC                                              ; --             ;
+; SLD_INFO                            ; QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1646286371 ; --            ; SoC                                              ; --             ;
 ; SOPCINFO_FILE                       ; SoC/synthesis/../../SoC.sopcinfo                      ; --            ; --                                               ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                    ; --            ; --                                               ; --             ;
 +-------------------------------------+-------------------------------------------------------+---------------+--------------------------------------------------+----------------+
@@ -184,12 +184,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 472 MB              ; 00:00:15                           ;
-; Fitter                    ; 00:00:24     ; 2.3                     ; 760 MB              ; 00:00:34                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 411 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 475 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 396 MB              ; 00:00:05                           ;
-; Total                     ; 00:00:56     ; --                      ; --                  ; 00:01:05                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 462 MB              ; 00:00:14                           ;
+; Fitter                    ; 00:00:25     ; 2.7                     ; 768 MB              ; 00:00:33                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 416 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 472 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 395 MB              ; 00:00:05                           ;
+; Total                     ; 00:00:58     ; --                      ; --                  ; 00:01:02                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

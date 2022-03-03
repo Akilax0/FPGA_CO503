@@ -87,11 +87,11 @@ ACDS_VERSION := 12.1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/toplevel.jdi
+JDI_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/toplevel.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/SoC.sopcinfo
+SOPCINFO_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -156,9 +156,9 @@ SOPC_SYSID_FLAG += --sidp=0x81040
 ELF_PATCH_FLAG  += --sidp 0x81040
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1646284880
-SOPC_SYSID_FLAG += --timestamp=1646284880
-ELF_PATCH_FLAG  += --timestamp 1646284880
+# setting SOPC_TIMESTAMP is 1646286371
+SOPC_SYSID_FLAG += --timestamp=1646286371
+ELF_PATCH_FLAG  += --timestamp 1646286371
 
 # Small-footprint (polled mode) driver none 
 # setting altera_avalon_jtag_uart_driver.enable_small_driver is false

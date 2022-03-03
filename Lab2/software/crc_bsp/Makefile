@@ -101,7 +101,7 @@ ACDS_VERSION := 12.1
 # BUILD_NUMBER: 177
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2_2/SoC.sopcinfo
+SOPC_FILE := C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/SoC.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
