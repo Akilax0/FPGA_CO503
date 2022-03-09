@@ -16,6 +16,6 @@
  </clocktable>
  <library
    expandedCategories="Project,Library/Verification,Library,Library/Verification/Simulation,Library/Embedded Processors" />
- <window width="1938" height="1048" x="1769" y="222" />
+ <window width="1938" height="1048" x="-210" y="73" />
  <hdlexample language="VERILOG" />
 </preferences>

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for toplevel
-Thu Mar 03 20:52:18 2022
+Fri Mar 04 15:17:48 2022
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -143,8 +143,8 @@ applicable agreement for further details.
 +------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                        ; Status ; Read at                  ;
 +------------------------------------------------------+--------+--------------------------+
-; SoC/synthesis/submodules/altera_reset_controller.sdc ; OK     ; Thu Mar 03 20:52:16 2022 ;
-; SoC/synthesis/submodules/SoC_cpu.sdc                 ; OK     ; Thu Mar 03 20:52:16 2022 ;
+; SoC/synthesis/submodules/altera_reset_controller.sdc ; OK     ; Fri Mar 04 15:17:34 2022 ;
+; SoC/synthesis/submodules/SoC_cpu.sdc                 ; OK     ; Fri Mar 04 15:17:34 2022 ;
 +------------------------------------------------------+--------+--------------------------+
 
 
@@ -2422,7 +2422,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Thu Mar 03 20:52:14 2022
+    Info: Processing started: Fri Mar 04 15:17:23 2022
 Info: Command: quartus_sta CRC -c toplevel
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
@@ -2577,9 +2577,9 @@ Info (332114): Report Metastability: Found 2 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 472 megabytes
-    Info: Processing ended: Thu Mar 03 20:52:18 2022
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 475 megabytes
+    Info: Processing ended: Fri Mar 04 15:17:48 2022
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:23
 
 
