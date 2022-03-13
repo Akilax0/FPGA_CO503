@@ -32,14 +32,14 @@
 module SoC_addr_router_003_default_decode
   #(
      parameter DEFAULT_CHANNEL = 1,
-               DEFAULT_DESTID = 7 
+               DEFAULT_DESTID = 10 
    )
-  (output [86 - 83 : 0] default_destination_id,
+  (output [82 - 79 : 0] default_destination_id,
    output [11-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[86 - 83 : 0];
+    DEFAULT_DESTID[82 - 79 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
@@ -63,7 +63,7 @@ module SoC_addr_router_003
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [97-1 : 0]    sink_data,
+    input  [93-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -72,7 +72,7 @@ module SoC_addr_router_003
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [97-1    : 0] src_data,
+    output reg [93-1    : 0] src_data,
     output reg [11-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -82,16 +82,16 @@ module SoC_addr_router_003
     // -------------------------------------------------------
     // Local parameters and variables
     // -------------------------------------------------------
-    localparam PKT_ADDR_H = 57;
+    localparam PKT_ADDR_H = 53;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 86;
-    localparam PKT_DEST_ID_L = 83;
-    localparam ST_DATA_W = 97;
+    localparam PKT_DEST_ID_H = 82;
+    localparam PKT_DEST_ID_L = 79;
+    localparam ST_DATA_W = 93;
     localparam ST_CHANNEL_W = 11;
     localparam DECODER_TYPE = 0;
 
-    localparam PKT_TRANS_WRITE = 60;
-    localparam PKT_TRANS_READ  = 61;
+    localparam PKT_TRANS_WRITE = 56;
+    localparam PKT_TRANS_READ  = 57;
 
     localparam PKT_ADDR_W = PKT_ADDR_H-PKT_ADDR_L + 1;
     localparam PKT_DEST_ID_W = PKT_DEST_ID_H-PKT_DEST_ID_L + 1;
@@ -103,14 +103,14 @@ module SoC_addr_router_003
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h80000 - 64'h40000);
-    localparam PAD1 = log2ceil(64'h81000 - 64'h80800);
+    localparam PAD0 = log2ceil(64'h30000 - 64'h20000);
+    localparam PAD1 = log2ceil(64'h31000 - 64'h30800);
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h81000;
+    localparam ADDR_RANGE = 64'h31000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -149,14 +149,14 @@ module SoC_addr_router_003
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-        // ( 0x40000 .. 0x80000 )
-        if ( {address[RG:PAD0],{PAD0{1'b0}}} == 20'h40000 ) begin
+        // ( 0x20000 .. 0x30000 )
+        if ( {address[RG:PAD0],{PAD0{1'b0}}} == 18'h20000 ) begin
             src_channel = 11'b10;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
         end
 
-        // ( 0x80800 .. 0x81000 )
-        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 20'h80800 ) begin
+        // ( 0x30800 .. 0x31000 )
+        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 18'h30800 ) begin
             src_channel = 11'b01;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
         end

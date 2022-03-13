@@ -9,12 +9,12 @@
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="420" />
-   <clocksource preferredWidth="420" />
-   <frequency preferredWidth="402" />
+   <clockname preferredWidth="188" />
+   <clocksource preferredWidth="188" />
+   <frequency preferredWidth="180" />
   </columns>
  </clocktable>
  <library
    expandedCategories="Library/Memories and Memory Controllers/On-Chip,Project,Library/Memories and Memory Controllers,Library" />
- <window width="1726" height="928" x="-423" y="114" />
+ <window width="870" height="850" x="2392" y="0" />
 </preferences>
