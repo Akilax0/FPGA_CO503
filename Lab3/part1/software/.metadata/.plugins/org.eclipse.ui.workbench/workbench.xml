@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="30" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="0" y="0">
+<window height="767" maximized="true" width="1024" x="748" y="-16">
 <fastViewData fastViewLocation="1024"/>
 <intro standby="true"/>
 <perspectiveBar>
@@ -9,28 +9,45 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="126" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="157" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="183" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="97" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="141" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="80" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1647017973905" focus="true" label="Workspace - Nios II">
+<page aggregateWorkingSetId="Aggregate for window 1647153277668" focus="true" label="Workspace - Nios II">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="consumer.c" partName="consumer.c" path="C:/Users/DELL/Documents/Academics/CO503/FPGA_CO503/Lab3/part1/software/consumer/consumer.c" title="consumer.c" tooltip="consumer/consumer.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/consumer/consumer.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="433"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="producer.c" partName="producer.c" path="C:/Users/DELL/Documents/Academics/CO503/FPGA_CO503/Lab3/part1/software/producer/producer.c" title="producer.c" tooltip="producer/producer.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/producer/producer.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="310"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="FIFO_1.c" partName="FIFO_1.c" path="C:/Users/DELL/Documents/Academics/CO503/FPGA_CO503/Lab3/part1/software/consumer/FIFO_1.c" title="FIFO_1.c" tooltip="consumer/FIFO_1.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/consumer/FIFO_1.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="695"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -63,7 +80,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.internal.introview" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -141,7 +158,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1325aef" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="1">&#x0A;<page content="org.eclipse.ui.internal.introview" label="Welcome"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@122f17b" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="1">&#x0A;<page content="org.eclipse.ui.internal.introview" label="Welcome"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
@@ -227,7 +244,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@bc9f58" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@c54b3b" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
 <folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="2">
 <page content="org.eclipse.ui.internal.introview" label="Welcome"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
@@ -238,7 +255,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.249499" ratioLeft="249" ratioRight="749" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.456743" ratioLeft="359" ratioRight="427" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.722958" ratioLeft="655" ratioRight="251" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -267,7 +284,22 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/consumer/consumer.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/producer/producer.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/consumer/FIFO_1.c"/>
+</editors>
+<item historyLabel="consumer.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="producer.c" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="FIFO_1.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -284,5 +316,15 @@
 </trimArea>
 </trimLayout>
 </window>
-<mruList/>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="FIFO_1.c" tooltip="consumer/FIFO_1.c">
+<persistable path="/consumer/FIFO_1.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="producer.c" tooltip="producer/producer.c">
+<persistable path="/producer/producer.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="consumer.c" tooltip="consumer/consumer.c">
+<persistable path="/consumer/consumer.c"/>
+</file>
+</mruList>
 </workbench>
