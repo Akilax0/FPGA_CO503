@@ -12,19 +12,19 @@
    element $${FILENAME}
    {
    }
-   element jtag_uart_0.avalon_jtag_slave
-   {
-      datum baseAddress
-      {
-         value = "198688";
-         type = "String";
-      }
-   }
    element jtag_uart_1.avalon_jtag_slave
    {
       datum baseAddress
       {
-         value = "198688";
+         value = "264224";
+         type = "String";
+      }
+   }
+   element jtag_uart_0.avalon_jtag_slave
+   {
+      datum baseAddress
+      {
+         value = "395296";
          type = "String";
       }
    }
@@ -36,11 +36,11 @@
          type = "int";
       }
    }
-   element sysid_qsys_0.control_slave
+   element sysid_0.control_slave
    {
       datum baseAddress
       {
-         value = "198696";
+         value = "395304";
          type = "String";
       }
    }
@@ -51,6 +51,11 @@
          value = "2";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element cpu_1
    {
@@ -59,12 +64,17 @@
          value = "7";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element cpu_1.jtag_debug_module
    {
       datum baseAddress
       {
-         value = "196608";
+         value = "262144";
          type = "String";
       }
    }
@@ -72,7 +82,7 @@
    {
       datum baseAddress
       {
-         value = "196608";
+         value = "393216";
          type = "String";
       }
    }
@@ -83,6 +93,11 @@
          value = "3";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element jtag_uart_1
    {
@@ -90,6 +105,11 @@
       {
          value = "8";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
       }
    }
    element onchip_mem_0
@@ -99,6 +119,11 @@
          value = "1";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element onchip_mem_1
    {
@@ -107,6 +132,11 @@
          value = "6";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element onchip_memory2_1
    {
@@ -114,6 +144,11 @@
       {
          value = "10";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
       }
    }
    element jtag_uart_1.reset
@@ -124,7 +159,15 @@
          type = "String";
       }
    }
-   element onchip_mem_1.s1
+   element timer_1.s1
+   {
+      datum baseAddress
+      {
+         value = "264192";
+         type = "String";
+      }
+   }
+   element onchip_memory2_1.s1
    {
       datum baseAddress
       {
@@ -136,23 +179,15 @@
    {
       datum baseAddress
       {
-         value = "198656";
+         value = "395264";
          type = "String";
       }
    }
-   element timer_1.s1
+   element onchip_mem_1.s1
    {
       datum baseAddress
       {
-         value = "198656";
-         type = "String";
-      }
-   }
-   element onchip_memory2_1.s1
-   {
-      datum baseAddress
-      {
-         value = "0";
+         value = "65536";
          type = "String";
       }
    }
@@ -160,16 +195,21 @@
    {
       datum baseAddress
       {
-         value = "131072";
+         value = "327680";
          type = "String";
       }
    }
-   element sysid_qsys_0
+   element sysid_0
    {
       datum _sortIndex
       {
          value = "5";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
       }
    }
    element timer_0
@@ -179,6 +219,11 @@
          value = "4";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element timer_1
    {
@@ -186,6 +231,11 @@
       {
          value = "9";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
       }
    }
 }
@@ -203,7 +253,7 @@
  <parameter name="projectName" value="MPSOC.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1647153091061" />
+ <parameter name="timeStamp" value="1647876332618" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk.clk_in" type="clock" dir="end" />
@@ -325,8 +375,8 @@
   <parameter name="dcache_ramBlockType" value="Automatic" />
   <parameter name="dcache_numTCDM" value="0" />
   <parameter name="dcache_lineSize" value="32" />
-  <parameter name="instAddrWidth" value="18" />
-  <parameter name="dataAddrWidth" value="18" />
+  <parameter name="instAddrWidth" value="19" />
+  <parameter name="dataAddrWidth" value="19" />
   <parameter name="tightlyCoupledDataMaster0AddrWidth" value="1" />
   <parameter name="tightlyCoupledDataMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledDataMaster2AddrWidth" value="1" />
@@ -335,8 +385,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem_0.s1' start='0x20000' end='0x2F2C0' /><slave name='cpu_0.jtag_debug_module' start='0x30000' end='0x30800' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_1.s1' start='0x0' end='0x1F490' /><slave name='timer_0.s1' start='0x30800' end='0x30820' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x30820' end='0x30828' /><slave name='sysid_qsys_0.control_slave' start='0x30828' end='0x30830' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_1.s1' start='0x20000' end='0x3F490' /><slave name='onchip_mem_0.s1' start='0x50000' end='0x5F2C0' /><slave name='cpu_0.jtag_debug_module' start='0x60000' end='0x60800' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_1.s1' start='0x20000' end='0x3F490' /><slave name='onchip_mem_0.s1' start='0x50000' end='0x5F2C0' /><slave name='timer_0.s1' start='0x60800' end='0x60820' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x60820' end='0x60828' /><slave name='sysid_0.control_slave' start='0x60828' end='0x60830' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone IV E" />
   <parameter name="internalIrqMaskSystemInfo" value="65538" />
@@ -373,8 +423,8 @@
    kind="altera_avalon_sysid_qsys"
    version="12.1"
    enabled="1"
-   name="sysid_qsys_0">
-  <parameter name="id" value="16" />
+   name="sysid_0">
+  <parameter name="id" value="0" />
   <parameter name="timestamp" value="0" />
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
@@ -498,8 +548,8 @@
   <parameter name="dcache_ramBlockType" value="Automatic" />
   <parameter name="dcache_numTCDM" value="0" />
   <parameter name="dcache_lineSize" value="32" />
-  <parameter name="instAddrWidth" value="18" />
-  <parameter name="dataAddrWidth" value="18" />
+  <parameter name="instAddrWidth" value="19" />
+  <parameter name="dataAddrWidth" value="19" />
   <parameter name="tightlyCoupledDataMaster0AddrWidth" value="1" />
   <parameter name="tightlyCoupledDataMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledDataMaster2AddrWidth" value="1" />
@@ -508,8 +558,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem_1.s1' start='0x20000' end='0x2F2C0' /><slave name='cpu_1.jtag_debug_module' start='0x30000' end='0x30800' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_1.s1' start='0x0' end='0x1F490' /><slave name='timer_1.s1' start='0x30800' end='0x30820' /><slave name='jtag_uart_1.avalon_jtag_slave' start='0x30820' end='0x30828' /><slave name='sysid_qsys_0.control_slave' start='0x30828' end='0x30830' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem_1.s1' start='0x10000' end='0x1F2C0' /><slave name='onchip_memory2_1.s1' start='0x20000' end='0x3F490' /><slave name='cpu_1.jtag_debug_module' start='0x40000' end='0x40800' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_mem_1.s1' start='0x10000' end='0x1F2C0' /><slave name='onchip_memory2_1.s1' start='0x20000' end='0x3F490' /><slave name='timer_1.s1' start='0x40800' end='0x40820' /><slave name='jtag_uart_1.avalon_jtag_slave' start='0x40820' end='0x40828' /><slave name='sysid_0.control_slave' start='0x60828' end='0x60830' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone IV E" />
   <parameter name="internalIrqMaskSystemInfo" value="65538" />
@@ -591,7 +641,7 @@
    start="cpu_0.instruction_master"
    end="cpu_0.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030000" />
+  <parameter name="baseAddress" value="0x00060000" />
  </connection>
  <connection kind="reset" version="12.1" start="clk.clk_reset" end="cpu_0.reset_n" />
  <connection kind="clock" version="12.1" start="clk.clk" end="cpu_0.clk" />
@@ -601,27 +651,15 @@
    version="12.1"
    start="clk.clk_reset"
    end="jtag_uart_0.reset" />
- <connection
-   kind="avalon"
-   version="12.1"
-   start="cpu_0.instruction_master"
-   end="onchip_mem_0.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00020000" />
- </connection>
- <connection kind="clock" version="12.1" start="clk.clk" end="sysid_qsys_0.clk" />
- <connection
-   kind="reset"
-   version="12.1"
-   start="clk.clk_reset"
-   end="sysid_qsys_0.reset" />
+ <connection kind="clock" version="12.1" start="clk.clk" end="sysid_0.clk" />
+ <connection kind="reset" version="12.1" start="clk.clk_reset" end="sysid_0.reset" />
  <connection
    kind="avalon"
    version="12.1"
    start="cpu_0.data_master"
-   end="sysid_qsys_0.control_slave">
+   end="sysid_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030828" />
+  <parameter name="baseAddress" value="0x00060828" />
  </connection>
  <connection kind="reset" version="12.1" start="clk.clk_reset" end="timer_0.reset" />
  <connection kind="clock" version="12.1" start="clk.clk" end="timer_0.clk" />
@@ -631,7 +669,7 @@
    start="cpu_0.data_master"
    end="timer_0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030800" />
+  <parameter name="baseAddress" value="0x00060800" />
  </connection>
  <connection kind="clock" version="12.1" start="clk.clk" end="onchip_mem_1.clk1" />
  <connection
@@ -645,7 +683,7 @@
    start="cpu_1.instruction_master"
    end="cpu_1.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030000" />
+  <parameter name="baseAddress" value="0x00040000" />
  </connection>
  <connection kind="clock" version="12.1" start="clk.clk" end="cpu_1.clk" />
  <connection kind="reset" version="12.1" start="clk.clk_reset" end="cpu_1.reset_n" />
@@ -663,7 +701,7 @@
    start="cpu_1.data_master"
    end="timer_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030800" />
+  <parameter name="baseAddress" value="0x00040800" />
  </connection>
  <connection
    kind="avalon"
@@ -671,7 +709,7 @@
    start="cpu_1.instruction_master"
    end="onchip_mem_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00020000" />
+  <parameter name="baseAddress" value="0x00010000" />
  </connection>
  <connection
    kind="clock"
@@ -689,7 +727,7 @@
    start="cpu_0.data_master"
    end="onchip_memory2_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x00020000" />
  </connection>
  <connection
    kind="avalon"
@@ -697,7 +735,7 @@
    start="cpu_1.data_master"
    end="onchip_memory2_1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="baseAddress" value="0x00020000" />
  </connection>
  <connection
    kind="interrupt"
@@ -723,7 +761,7 @@
    kind="reset"
    version="12.1"
    start="cpu_0.jtag_debug_module_reset"
-   end="sysid_qsys_0.reset" />
+   end="sysid_0.reset" />
  <connection
    kind="reset"
    version="12.1"
@@ -735,7 +773,7 @@
    start="cpu_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030820" />
+  <parameter name="baseAddress" value="0x00060820" />
  </connection>
  <connection
    kind="reset"
@@ -768,7 +806,7 @@
    start="cpu_1.data_master"
    end="jtag_uart_1.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030820" />
+  <parameter name="baseAddress" value="0x00040820" />
  </connection>
  <connection
    kind="reset"
@@ -791,16 +829,56 @@
    start="cpu_1.jtag_debug_module_reset"
    end="timer_1.reset" />
  <connection
-   kind="reset"
+   kind="avalon"
    version="12.1"
-   start="cpu_1.jtag_debug_module_reset"
-   end="sysid_qsys_0.reset" />
+   start="cpu_1.data_master"
+   end="onchip_mem_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu_0.data_master"
+   end="onchip_mem_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00050000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu_0.instruction_master"
+   end="onchip_mem_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00050000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu_1.instruction_master"
+   end="onchip_memory2_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00020000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu_0.instruction_master"
+   end="onchip_memory2_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00020000" />
+ </connection>
  <connection
    kind="avalon"
    version="12.1"
    start="cpu_1.data_master"
-   end="sysid_qsys_0.control_slave">
+   end="sysid_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00030828" />
+  <parameter name="baseAddress" value="0x00060828" />
  </connection>
+ <connection
+   kind="reset"
+   version="12.1"
+   start="cpu_1.jtag_debug_module_reset"
+   end="sysid_0.reset" />
 </system>

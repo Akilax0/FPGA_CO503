@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu_1' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/DELL/Documents/Academics/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Sun Mar 13 12:31:28 IST 2022
+ * Generated: Mon Mar 21 21:16:23 IST 2022
  */
 
 /*
@@ -65,11 +65,11 @@
  *
  */
 
-#define ONCHIP_MEMORY2_1_REGION_BASE 0x0
+#define ONCHIP_MEMORY2_1_REGION_BASE 0x20000
 #define ONCHIP_MEMORY2_1_REGION_SPAN 128144
-#define ONCHIP_MEM_1_REGION_BASE 0x20020
+#define ONCHIP_MEM_1_REGION_BASE 0x10020
 #define ONCHIP_MEM_1_REGION_SPAN 62112
-#define RESET_REGION_BASE 0x20000
+#define RESET_REGION_BASE 0x10000
 #define RESET_REGION_SPAN 32
 
 
@@ -82,7 +82,7 @@
 #define ALT_RESET_DEVICE ONCHIP_MEM_1
 #define ALT_RODATA_DEVICE ONCHIP_MEMORY2_1
 #define ALT_RWDATA_DEVICE ONCHIP_MEMORY2_1
-#define ALT_TEXT_DEVICE ONCHIP_MEM_1
+#define ALT_TEXT_DEVICE ONCHIP_MEMORY2_1
 
 
 /*
@@ -98,7 +98,7 @@
  *
  */
 
-#define ALT_LOAD_COPY_RODATA
+#define ALT_LOAD_COPY_EXCEPTIONS
 #define ALT_LOAD_COPY_RWDATA
 
 #endif /* __LINKER_H_ */

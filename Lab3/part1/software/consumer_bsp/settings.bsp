@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 13, 2022 12:31:27 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1647154887693</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\DELL\Documents\Academics\CO503\FPGA_CO503\Lab3\part1\software\consumer_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Mar 21, 2022 9:16:22 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1647877582838</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part1\software\consumer_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\Users\DELL\Documents\Academics\CO503\FPGA_CO503\Lab3\part1\SoC.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part1\SoC.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu_1</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -86,7 +86,7 @@
                 <SettingName>hal.linker.enable_alt_load_copy_rodata</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>Boolean</Type>
-                <Value>1</Value>
+                <Value>0</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Causes the alt_load() facility to copy the .rodata section. If true, this setting defines the macro ALT_LOAD_COPY_RODATA in linker.h.</Description>
@@ -110,7 +110,7 @@
                 <SettingName>hal.linker.enable_alt_load_copy_exceptions</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>Boolean</Type>
-                <Value>0</Value>
+                <Value>1</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Causes the alt_load() facility to copy the .exceptions section. If true, this setting defines the macro ALT_LOAD_COPY_EXCEPTIONS in linker.h.</Description>
@@ -851,38 +851,38 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>onchip_memory2_1</slaveDescriptor>
-                <addressRange>0x00000000 - 0x0001F48F</addressRange>
-                <addressSpan>128144</addressSpan>
-                <attributes>memory</attributes>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>onchip_mem_1</slaveDescriptor>
-                <addressRange>0x00020000 - 0x0002F2BF</addressRange>
+                <addressRange>0x00010000 - 0x0001F2BF</addressRange>
                 <addressSpan>62144</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>onchip_memory2_1</slaveDescriptor>
+                <addressRange>0x00020000 - 0x0003F48F</addressRange>
+                <addressSpan>128144</addressSpan>
+                <attributes>memory</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>timer_1</slaveDescriptor>
-                <addressRange>0x00030800 - 0x0003081F</addressRange>
+                <addressRange>0x00040800 - 0x0004081F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_1</slaveDescriptor>
-                <addressRange>0x00030820 - 0x00030827</addressRange>
+                <addressRange>0x00040820 - 0x00040827</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x00030828 - 0x0003082F</addressRange>
+                <slaveDescriptor>sysid_0</slaveDescriptor>
+                <addressRange>0x00060828 - 0x0006082F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>onchip_mem_1</regionName>
+                <regionName>onchip_memory2_1</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>

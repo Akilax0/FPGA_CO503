@@ -101,7 +101,7 @@ ACDS_VERSION := 12.1
 # BUILD_NUMBER: 177
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/DELL/Documents/Academics/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+SOPC_FILE := C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

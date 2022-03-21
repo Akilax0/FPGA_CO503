@@ -87,11 +87,11 @@ ACDS_VERSION := 12.1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/Users/DELL/Documents/Academics/CO503/FPGA_CO503/Lab3/part1/toplevel.jdi
+JDI_FILE := C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/toplevel.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/DELL/Documents/Academics/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+SOPCINFO_FILE := C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -146,19 +146,19 @@ SOPC_NAME := SoC
 ELF_PATCH_FLAG  += --simulation_enabled false
 
 # The SOPC System ID 
-# setting SOPC_SYSID is 16
-SOPC_SYSID_FLAG += --id=16
-ELF_PATCH_FLAG  += --id 16
+# setting SOPC_SYSID is 0
+SOPC_SYSID_FLAG += --id=0
+ELF_PATCH_FLAG  += --id 0
 
 # The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x30828
-SOPC_SYSID_FLAG += --sidp=0x30828
-ELF_PATCH_FLAG  += --sidp 0x30828
+# setting SOPC_SYSID_BASE_ADDRESS is 0x60828
+SOPC_SYSID_FLAG += --sidp=0x60828
+ELF_PATCH_FLAG  += --sidp 0x60828
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1647154565
-SOPC_SYSID_FLAG += --timestamp=1647154565
-ELF_PATCH_FLAG  += --timestamp 1647154565
+# setting SOPC_TIMESTAMP is 1647876972
+SOPC_SYSID_FLAG += --timestamp=1647876972
+ELF_PATCH_FLAG  += --timestamp 1647876972
 
 # Small-footprint (polled mode) driver none 
 # setting altera_avalon_jtag_uart_driver.enable_small_driver is false
