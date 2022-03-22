@@ -18,7 +18,7 @@
 void WRITE_FIFO_1(int *buffer)
 {
 	// Wait if the fifo is full
-	while(fullp){}
+	while(IORD_32DIRECT(MEM_BASE,fullp)==0x1){}
 
 	// Write the data to FIFO
 	IOWR_32DIRECT(MEM_BASE,writep,buffer);
@@ -30,6 +30,22 @@ void WRITE_FIFO_1(int *buffer)
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) + 0x1);
 
 	// Update the "full?" and "empty?" flags accordingly
+	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)!=NULL){
+		IOWR_32DIRECT(MEM_BASE, fullp, 0x1);
+	}
+	else{
+		IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
+	}
+
+	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)==NULL){
+		IOWR_32DIRECT(MEM_BASE, emptyp, 0x1);
+	}
+	else{
+		IOWR_32DIRECT(MEM_BASE, emptyp, 0x0);
+	}
+	
+
+
 	// Set the full flag if FIFO is now full
 	// Reset the empty flag if FIFO now has 1 entry
 }
@@ -38,7 +54,7 @@ void WRITE_FIFO_1(int *buffer)
 void READ_FIFO_1(int *buffer)
 {
 	// Wait if the fifo is empty
-	while(emptyp){}
+	while(IORD_32DIRECT(MEM_BASE,emptyp)==0x1){}
 
 	// Read the data
 	IOWR_32RD(MEM_BASE,readp,buffer);
@@ -50,6 +66,20 @@ void READ_FIFO_1(int *buffer)
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) - 0x1);
 
 	// Update the "full?" and "empty?" flags accordingly
+	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)!=NULL){
+		IOWR_32DIRECT(MEM_BASE, fullp, 0x1);
+	}
+	else{
+		IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
+	}
+	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)==NULL){
+		IOWR_32DIRECT(MEM_BASE, emptyp, 0x1);
+	}
+	else{
+		IOWR_32DIRECT(MEM_BASE, emptyp, 0x0);
+	}
+
+
 	// Set the empty flag if FIFO is now empty
 	// Reset the full flag if FIFO now has 1 entry less than capacity
 }
@@ -67,6 +97,6 @@ void FIFO_1_INIT()
 
 	// Assigning values for the flags.
 	IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
-	IOWR_32DIRECT(MEM_BASE, emptyp, 0x0); // The fifo is empty at the start
+	IOWR_32DIRECT(MEM_BASE, emptyp, 0x1); // The fifo is empty at the start
 	IOWR_32DIRECT(MEM_BASE, countp, 0x0); // The fifo is empty at the start
 }
