@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Tue Mar 22 21:46:22 IST 2022
+ * Generated: Wed Mar 23 07:15:20 IST 2022
  */
 
 /*

@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Tue Mar 22 21:46:22 IST 2022
+ * Generated: Wed Mar 23 08:02:32 IST 2022
  */
 
 /*
@@ -50,7 +50,9 @@
 
 MEMORY
 {
-    shared_mem : ORIGIN = 0x0, LENGTH = 131072
+    data0 : ORIGIN = 0x0, LENGTH = 32768
+    data1 : ORIGIN = 0x8003, LENGTH = 32768
+    shared : ORIGIN = 0x10006, LENGTH = 65520
     reset : ORIGIN = 0x30000, LENGTH = 32
     onchip_mem0 : ORIGIN = 0x30020, LENGTH = 65504
 }
@@ -208,7 +210,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > onchip_mem0 = 0x3a880100 /* Nios II NOP instruction */
+    } > shared = 0x3a880100 /* Nios II NOP instruction */
 
     /*
      *
@@ -225,7 +227,7 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > shared_mem
+    } > data0
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -255,7 +257,7 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > shared_mem
+    } > data0
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
@@ -279,7 +281,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > shared_mem
+    } > data0
 
     /*
      *
@@ -304,27 +306,7 @@ SECTIONS
      *
      */
 
-    .shared_mem : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
-    {
-        PROVIDE (_alt_partition_shared_mem_start = ABSOLUTE(.));
-        *(.shared_mem. shared_mem.*)
-        . = ALIGN(4);
-        PROVIDE (_alt_partition_shared_mem_end = ABSOLUTE(.));
-        _end = ABSOLUTE(.);
-        end = ABSOLUTE(.);
-        __alt_stack_base = ABSOLUTE(.);
-    } > shared_mem
-
-    PROVIDE (_alt_partition_shared_mem_load_addr = LOADADDR(.shared_mem));
-
-    /*
-     *
-     * This section's LMA is set to the .text region.
-     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
-     *
-     */
-
-    .onchip_mem0 LOADADDR (.shared_mem) + SIZEOF (.shared_mem) : AT ( LOADADDR (.shared_mem) + SIZEOF (.shared_mem) )
+    .onchip_mem0 : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
     {
         PROVIDE (_alt_partition_onchip_mem0_start = ABSOLUTE(.));
         *(.onchip_mem0. onchip_mem0.*)
@@ -333,6 +315,24 @@ SECTIONS
     } > onchip_mem0
 
     PROVIDE (_alt_partition_onchip_mem0_load_addr = LOADADDR(.onchip_mem0));
+
+    /*
+     *
+     * The heap will start at the end of the .bss section
+     *
+     */
+    PROVIDE( _end = __bss_end );
+    _end = __bss_end;
+    PROVIDE( end = __bss_end );
+    end = __bss_end;
+
+    /*
+     *
+     * The stack base
+     *
+     */
+    PROVIDE( __alt_stack_base = ABSOLUTE(.) );
+    __alt_stack_base = ABSOLUTE(.);
 
     /*
      * Stabs debugging sections.
@@ -381,7 +381,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x20000;
+__alt_data_end = 0x8000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -397,4 +397,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x20000 );
+PROVIDE( __alt_heap_limit    = 0x8000 );

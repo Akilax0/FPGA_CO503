@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 22, 2022 9:48:32 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1647965912091</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab3\part1\software\consumer_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\Users\akila\Documents\co503\repo\FPGA_CO503\Lab3\part1\SoC.sopcinfo</SopcDesignFile>
+        <BspGeneratedTimeStamp>Mar 23, 2022 8:09:31 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1648003171611</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\akila\Documents\co503\FPGA_CO503\Lab3\part1\software\consumer_bsp</BspGeneratedLocation>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
+        <SopcDesignFile>C:\Users\akila\Documents\co503\FPGA_CO503\Lab3\part1\SoC.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu1</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -146,7 +146,7 @@
                 <SettingName>hal.linker.exception_stack_memory_region_name</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>shared_mem</Value>
+                <Value>none</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'exception_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'exception_stack' memory region.</Description>
@@ -182,7 +182,7 @@
                 <SettingName>hal.linker.interrupt_stack_memory_region_name</SettingName>
                 <Identifier>NONE</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>shared_mem</Value>
+                <Value>none</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Name of the existing memory region that will be divided up to create the 'interrupt_stack' memory region. The selected region name will be adjusted automatically when the BSP is generated to create the 'interrupt_stack' memory region.</Description>
@@ -850,6 +850,46 @@
                 <Enabled>false</Enabled>
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
+        <LinkerRegion>
+                <regionName>data0</regionName>
+                <memoryName>shared_mem</memoryName>
+                <offset>0</offset>
+                <size>32768</size>
+                <baseAddress>0x0</baseAddress>
+                <addressRange>0x00000000 - 0x00007FFF</addressRange>
+        </LinkerRegion>
+        <LinkerRegion>
+                <regionName>data1</regionName>
+                <memoryName>shared_mem</memoryName>
+                <offset>32771</offset>
+                <size>32768</size>
+                <baseAddress>0x8003</baseAddress>
+                <addressRange>0x00008003 - 0x00010002</addressRange>
+        </LinkerRegion>
+        <LinkerRegion>
+                <regionName>shared</regionName>
+                <memoryName>shared_mem</memoryName>
+                <offset>65542</offset>
+                <size>65520</size>
+                <baseAddress>0x10006</baseAddress>
+                <addressRange>0x00010006 - 0x0001FFF5</addressRange>
+        </LinkerRegion>
+        <LinkerRegion>
+                <regionName>reset</regionName>
+                <memoryName>onchip_mem1</memoryName>
+                <offset>0</offset>
+                <size>32</size>
+                <baseAddress>0x30000</baseAddress>
+                <addressRange>0x00030000 - 0x0003001F</addressRange>
+        </LinkerRegion>
+        <LinkerRegion>
+                <regionName>onchip_mem1</regionName>
+                <memoryName>onchip_mem1</memoryName>
+                <offset>32</offset>
+                <size>65504</size>
+                <baseAddress>0x30020</baseAddress>
+                <addressRange>0x00030020 - 0x0003FFFF</addressRange>
+        </LinkerRegion>
         <MemoryMap>
                 <slaveDescriptor>shared_mem</slaveDescriptor>
                 <addressRange>0x00000000 - 0x0001FFFF</addressRange>
@@ -882,26 +922,26 @@
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>onchip_mem1</regionName>
+                <regionName>shared</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>
-                <regionName>shared_mem</regionName>
+                <regionName>data1</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rwdata</sectionName>
-                <regionName>shared_mem</regionName>
+                <regionName>data1</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.bss</sectionName>
-                <regionName>shared_mem</regionName>
+                <regionName>data1</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.heap</sectionName>
-                <regionName>shared_mem</regionName>
+                <regionName>data1</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>shared_mem</regionName>
+                <regionName>data1</regionName>
         </LinkerSection>
 </sch:Settings>

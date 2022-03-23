@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Tue Mar 22 21:46:22 IST 2022
+ * Generated: Wed Mar 23 08:02:32 IST 2022
  */
 
 /*
@@ -264,7 +264,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1647964715
+#define SYSID_TIMESTAMP 1648001285
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

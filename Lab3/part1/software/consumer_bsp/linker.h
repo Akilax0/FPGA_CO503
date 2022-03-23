@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Tue Mar 22 21:48:32 IST 2022
+ * Generated: Wed Mar 23 08:09:02 IST 2022
  */
 
 /*
@@ -65,12 +65,16 @@
  *
  */
 
+#define DATA0_REGION_BASE 0x0
+#define DATA0_REGION_SPAN 32768
+#define DATA1_REGION_BASE 0x8003
+#define DATA1_REGION_SPAN 32768
 #define ONCHIP_MEM1_REGION_BASE 0x30020
 #define ONCHIP_MEM1_REGION_SPAN 65504
 #define RESET_REGION_BASE 0x30000
 #define RESET_REGION_SPAN 32
-#define SHARED_MEM_REGION_BASE 0x0
-#define SHARED_MEM_REGION_SPAN 131072
+#define SHARED_REGION_BASE 0x10006
+#define SHARED_REGION_SPAN 65520
 
 
 /*
@@ -82,7 +86,7 @@
 #define ALT_RESET_DEVICE ONCHIP_MEM1
 #define ALT_RODATA_DEVICE SHARED_MEM
 #define ALT_RWDATA_DEVICE SHARED_MEM
-#define ALT_TEXT_DEVICE ONCHIP_MEM1
+#define ALT_TEXT_DEVICE SHARED_MEM
 
 
 /*
