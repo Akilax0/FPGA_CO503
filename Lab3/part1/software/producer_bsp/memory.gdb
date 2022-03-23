@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
-# Machine generated for CPU 'cpu_0' in SOPC Builder design 'SoC'
-# SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+# Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
+# SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab3/part1/SoC.sopcinfo
 #
-# Generated: Mon Mar 21 21:11:19 IST 2022
+# Generated: Tue Mar 22 21:46:22 IST 2022
 
 # DO NOT MODIFY THIS FILE
 #
@@ -46,8 +46,8 @@
 # The cache attribute is specified which improves GDB performance
 # by allowing GDB to cache memory contents on the host.
 
-# onchip_memory2_1
-memory 0x20000 0x3f490 cache
+# shared_mem
+memory 0x0 0x20000 cache
 
-# onchip_mem_0
-memory 0x50000 0x5f2c0 cache
+# onchip_mem0
+memory 0x30000 0x40000 cache

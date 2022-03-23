@@ -1,10 +1,10 @@
 /*
  * alt_sys_init.c - HAL initialization source
  *
- * Machine generated for CPU 'cpu_0' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Mon Mar 21 21:11:19 IST 2022
+ * Generated: Tue Mar 22 21:46:22 IST 2022
  */
 
 /*
@@ -67,9 +67,9 @@
  * Allocate the device storage
  */
 
-ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( CPU_0, cpu_0);
+ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( CPU0, cpu0);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART_0, jtag_uart_0);
-ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID_0, sysid_0);
+ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_0, timer_0);
 
 /*
@@ -82,7 +82,7 @@ ALTERA_AVALON_TIMER_INSTANCE ( TIMER_0, timer_0);
 
 void alt_irq_init ( const void* base )
 {
-    ALTERA_NIOS2_QSYS_IRQ_INIT ( CPU_0, cpu_0);
+    ALTERA_NIOS2_QSYS_IRQ_INIT ( CPU0, cpu0);
     alt_irq_cpu_enable_interrupts();
 }
 
@@ -95,5 +95,5 @@ void alt_sys_init( void )
 {
     ALTERA_AVALON_TIMER_INIT ( TIMER_0, timer_0);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART_0, jtag_uart_0);
-    ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID_0, sysid_0);
+    ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
 }

@@ -149,7 +149,10 @@ module SoC_id_router
 
 
         if (destid == 0 ) begin
-            src_channel = 10'b1;
+            src_channel = 10'b01;
+        end
+        if (destid == 1 ) begin
+            src_channel = 10'b10;
         end
 
 

@@ -32,7 +32,7 @@
 module SoC_id_router_002_default_decode
   #(
      parameter DEFAULT_CHANNEL = 0,
-               DEFAULT_DESTID = 0 
+               DEFAULT_DESTID = 1 
    )
   (output [83 - 80 : 0] default_destination_id,
    output [10-1 : 0] default_src_channel
@@ -148,17 +148,8 @@ module SoC_id_router_002
         destid      = sink_data[PKT_DEST_ID_H : PKT_DEST_ID_L];
 
 
-        if (destid == 0 ) begin
-            src_channel = 10'b0001;
-        end
         if (destid == 1 ) begin
-            src_channel = 10'b0010;
-        end
-        if (destid == 2 ) begin
-            src_channel = 10'b0100;
-        end
-        if (destid == 3 ) begin
-            src_channel = 10'b1000;
+            src_channel = 10'b1;
         end
 
 

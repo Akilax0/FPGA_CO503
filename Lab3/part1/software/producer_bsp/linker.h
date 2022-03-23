@@ -1,10 +1,10 @@
 /*
  * linker.h - Linker script mapping information
  *
- * Machine generated for CPU 'cpu_0' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
+ * SOPC Builder design path: C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Mon Mar 21 21:11:19 IST 2022
+ * Generated: Tue Mar 22 21:46:22 IST 2022
  */
 
 /*
@@ -65,12 +65,12 @@
  *
  */
 
-#define ONCHIP_MEMORY2_1_REGION_BASE 0x20000
-#define ONCHIP_MEMORY2_1_REGION_SPAN 128144
-#define ONCHIP_MEM_0_REGION_BASE 0x50020
-#define ONCHIP_MEM_0_REGION_SPAN 62112
-#define RESET_REGION_BASE 0x50000
+#define ONCHIP_MEM0_REGION_BASE 0x30020
+#define ONCHIP_MEM0_REGION_SPAN 65504
+#define RESET_REGION_BASE 0x30000
 #define RESET_REGION_SPAN 32
+#define SHARED_MEM_REGION_BASE 0x0
+#define SHARED_MEM_REGION_SPAN 131072
 
 
 /*
@@ -78,11 +78,11 @@
  *
  */
 
-#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEM_0
-#define ALT_RESET_DEVICE ONCHIP_MEM_0
-#define ALT_RODATA_DEVICE ONCHIP_MEMORY2_1
-#define ALT_RWDATA_DEVICE ONCHIP_MEMORY2_1
-#define ALT_TEXT_DEVICE ONCHIP_MEMORY2_1
+#define ALT_EXCEPTIONS_DEVICE ONCHIP_MEM0
+#define ALT_RESET_DEVICE ONCHIP_MEM0
+#define ALT_RODATA_DEVICE SHARED_MEM
+#define ALT_RWDATA_DEVICE SHARED_MEM
+#define ALT_TEXT_DEVICE ONCHIP_MEM0
 
 
 /*
@@ -98,7 +98,7 @@
  *
  */
 
-#define ALT_LOAD_COPY_EXCEPTIONS
+#define ALT_LOAD_COPY_RODATA
 #define ALT_LOAD_COPY_RWDATA
 
 #endif /* __LINKER_H_ */

@@ -142,8 +142,7 @@ ACDS_VERSION := 12.1
 ELF := producer.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += Skeleton Code/FIFO_1.c
-C_SRCS += Skeleton Code/producer.c
+C_SRCS :=
 CXX_SRCS :=
 ASM_SRCS :=
 
