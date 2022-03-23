@@ -30,24 +30,18 @@ void WRITE_FIFO_1(int *buffer)
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) + 0x1);
 
 	// Update the "full?" and "empty?" flags accordingly
-	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)!=NULL){
-		IOWR_32DIRECT(MEM_BASE, fullp, 0x1);
-	}
-	else{
-		IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
-	}
-
-	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)==NULL){
-		IOWR_32DIRECT(MEM_BASE, emptyp, 0x1);
-	}
-	else{
-		IOWR_32DIRECT(MEM_BASE, emptyp, 0x0);
-	}
-	
-
-
 	// Set the full flag if FIFO is now full
 	// Reset the empty flag if FIFO now has 1 entry
+	if(writep==readp && IORD_32DIRECT(MEM_BASE,writep)!=NULL){
+		IOWR_32DIRECT(MEM_BASE,fullp,0x1);
+	}else{
+		IORD_32DIRECT(MEM_BASE,fullp,0x0);
+	}
+	if(writep==readp && IORD_32DIRECT(MEM_BASE,readp)==NULL){
+		IOWR_32DIRECT(MEM_BASE,emptyp,0x1);
+	}else{
+		IORD_32DIRECT(MEM_BASE,emptyp,0x0);
+	}
 }
 
 
@@ -57,7 +51,7 @@ void READ_FIFO_1(int *buffer)
 	while(IORD_32DIRECT(MEM_BASE,emptyp)==0x1){}
 
 	// Read the data
-	IOWR_32RD(MEM_BASE,readp,buffer);
+	buffer = IORD_32DIRECT(MEM_BASE,readp);
 
 	// Update the read pointer
 	readp += 0x4;
@@ -66,23 +60,18 @@ void READ_FIFO_1(int *buffer)
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) - 0x1);
 
 	// Update the "full?" and "empty?" flags accordingly
-	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)!=NULL){
-		IOWR_32DIRECT(MEM_BASE, fullp, 0x1);
-	}
-	else{
-		IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
-	}
-	if(readp==writep && IORD_32DIRECT(MEM_BASE,readp)==NULL){
-		IOWR_32DIRECT(MEM_BASE, emptyp, 0x1);
-	}
-	else{
-		IOWR_32DIRECT(MEM_BASE, emptyp, 0x0);
-	}
-
-
 	// Set the empty flag if FIFO is now empty
 	// Reset the full flag if FIFO now has 1 entry less than capacity
-}
+	if(writep==readp && IORD_32DIRECT(MEM_BASE,writep)!=NULL){
+		IOWR_32DIRECT(MEM_BASE,fullp,0x1);
+	}else{
+		IORD_32DIRECT(MEM_BASE,fullp,0x0);
+	}
+	if(writep==readp && IORD_32DIRECT(MEM_BASE,readp)==NULL){
+		IOWR_32DIRECT(MEM_BASE,emptyp,0x1);
+	}else{
+		IORD_32DIRECT(MEM_BASE,emptyp,0x0);
+	}
 
 
 
