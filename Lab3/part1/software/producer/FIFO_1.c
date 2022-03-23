@@ -35,12 +35,12 @@ void WRITE_FIFO_1(int *buffer)
 	if(writep==readp && IORD_32DIRECT(MEM_BASE,writep)!=NULL){
 		IOWR_32DIRECT(MEM_BASE,fullp,0x1);
 	}else{
-		IORD_32DIRECT(MEM_BASE,fullp,0x0);
+		IOWR_32DIRECT(MEM_BASE,fullp,0x0);
 	}
 	if(writep==readp && IORD_32DIRECT(MEM_BASE,readp)==NULL){
 		IOWR_32DIRECT(MEM_BASE,emptyp,0x1);
 	}else{
-		IORD_32DIRECT(MEM_BASE,emptyp,0x0);
+		IOWR_32DIRECT(MEM_BASE,emptyp,0x0);
 	}
 }
 
@@ -65,15 +65,14 @@ void READ_FIFO_1(int *buffer)
 	if(writep==readp && IORD_32DIRECT(MEM_BASE,writep)!=NULL){
 		IOWR_32DIRECT(MEM_BASE,fullp,0x1);
 	}else{
-		IORD_32DIRECT(MEM_BASE,fullp,0x0);
+		IOWR_32DIRECT(MEM_BASE,fullp,0x0);
 	}
 	if(writep==readp && IORD_32DIRECT(MEM_BASE,readp)==NULL){
 		IOWR_32DIRECT(MEM_BASE,emptyp,0x1);
 	}else{
-		IORD_32DIRECT(MEM_BASE,emptyp,0x0);
+		IOWR_32DIRECT(MEM_BASE,emptyp,0x0);
 	}
-
-
+}
 
 //Initialization
 void FIFO_1_INIT()
