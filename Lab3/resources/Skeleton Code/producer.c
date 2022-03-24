@@ -8,7 +8,6 @@
 
 #include "FIFO_1.h"
 
-
 void delay(int n);
 int producer();
 

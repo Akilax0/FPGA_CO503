@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 23, 2022 8:09:24 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1648003164516</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Mar 24, 2022 3:54:19 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1648117459369</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\akila\Documents\co503\FPGA_CO503\Lab3\part1\software\producer_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\akila\Documents\co503\FPGA_CO503\Lab3\part1\SoC.sopcinfo</SopcDesignFile>
@@ -922,26 +922,26 @@
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>shared</regionName>
+                <regionName>onchip_mem0</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>
-                <regionName>data0</regionName>
+                <regionName>shared</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rwdata</sectionName>
-                <regionName>data0</regionName>
+                <regionName>shared</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.bss</sectionName>
-                <regionName>data0</regionName>
+                <regionName>shared</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.heap</sectionName>
-                <regionName>data0</regionName>
+                <regionName>shared</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>data0</regionName>
+                <regionName>shared</regionName>
         </LinkerSection>
 </sch:Settings>

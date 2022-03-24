@@ -30,7 +30,7 @@
 
 // Pointers associated with the FIFO. These are offsets to MEM_BASE
  int writep; // Write pointer. Points to the next slot to be written in. Used and modified only by the writing CPU
- int readpp; // Read pointer. Points to the next slot to be read. Used and modified only by the reading CPU
+ int readp; // Read pointer. Points to the next slot to be read. Used and modified only by the reading CPU
  int fullp; // Points to "full?" flag in shared memory
  int emptyp; // points to "empty?" flag in shared memory
  int countp; // Points to "count" in shared memory

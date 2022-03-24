@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Wed Mar 23 08:02:32 IST 2022
+ * Generated: Thu Mar 24 15:50:48 IST 2022
  */
 
 /*
@@ -210,7 +210,7 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > shared = 0x3a880100 /* Nios II NOP instruction */
+    } > onchip_mem0 = 0x3a880100 /* Nios II NOP instruction */
 
     /*
      *
@@ -227,7 +227,7 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > data0
+    } > shared
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -257,7 +257,7 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > data0
+    } > shared
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
@@ -281,7 +281,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > data0
+    } > shared
 
     /*
      *
@@ -306,7 +306,7 @@ SECTIONS
      *
      */
 
-    .onchip_mem0 : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
+    .onchip_mem0 LOADADDR (.rwdata) + SIZEOF (.rwdata) : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
     {
         PROVIDE (_alt_partition_onchip_mem0_start = ABSOLUTE(.));
         *(.onchip_mem0. onchip_mem0.*)
@@ -381,7 +381,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x8000;
+__alt_data_end = 0x1fff4;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -397,4 +397,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x8000 );
+PROVIDE( __alt_heap_limit    = 0x1fff4 );

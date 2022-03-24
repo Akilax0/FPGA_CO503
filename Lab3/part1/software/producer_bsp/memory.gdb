@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
 # SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
 #
-# Generated: Wed Mar 23 07:15:20 IST 2022
+# Generated: Thu Mar 24 15:13:30 IST 2022
 
 # DO NOT MODIFY THIS FILE
 #
