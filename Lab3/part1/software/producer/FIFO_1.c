@@ -73,7 +73,7 @@ void READ_FIFO_1(int *buffer)
 		IOWR_32DIRECT(MEM_BASE,emptyp,0x0);
 	}
 
-
+}
 //Initialization
 void FIFO_1_INIT()
 {

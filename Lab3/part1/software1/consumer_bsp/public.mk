@@ -85,6 +85,10 @@ ACDS_VERSION := 12.1
 # used to generate this makefile. 
 # BUILD_NUMBER: 177
 
+# Quartus Generated JDI File. Required for resolving node instance ID's with 
+# design component names. 
+JDI_FILE := C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/toplevel.jdi
+
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
 SOPCINFO_FILE := C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
@@ -152,9 +156,9 @@ SOPC_SYSID_FLAG += --sidp=0x41020
 ELF_PATCH_FLAG  += --sidp 0x41020
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1648001285
-SOPC_SYSID_FLAG += --timestamp=1648001285
-ELF_PATCH_FLAG  += --timestamp 1648001285
+# setting SOPC_TIMESTAMP is 1648118178
+SOPC_SYSID_FLAG += --timestamp=1648118178
+ELF_PATCH_FLAG  += --timestamp 1648118178
 
 # Small-footprint (polled mode) driver none 
 # setting altera_avalon_jtag_uart_driver.enable_small_driver is false

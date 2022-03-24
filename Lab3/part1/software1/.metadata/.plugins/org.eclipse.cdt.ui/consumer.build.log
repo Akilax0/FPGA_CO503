@@ -1,15 +1,26 @@
 
-**** Clean-only build of configuration Nios II for project consumer ****
+**** Build of configuration Nios II for project consumer ****
 
-make clean 
-      2 [main] sh 18456 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+make all 
+      5 [main] sh 12240 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
 the public mailing list cygwin@cygwin.com
-      3 [main] sh 24020 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+      2 [main] sh 21348 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
 the public mailing list cygwin@cygwin.com
-      3 [main] rm 1160 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+      2 [main] echo 22732 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../consumer_bsp/
 the public mailing list cygwin@cygwin.com
-      3 [main] sh 22060 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+make --no-print-directory -C ../consumer_bsp/
+      3 [main] pwd 21984 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
 the public mailing list cygwin@cygwin.com
-[consumer clean complete]
+      3 [main] sh 5672 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      5 [main] sh 23868 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      7 [main] true 5560 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      7 [main] sh 17204 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[consumer build complete]
 
 **** Build Finished ****
