@@ -3,17 +3,18 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="47" />
-   <irq preferredWidth="34" />
+   <connections preferredWidth="175" />
+   <irq preferredWidth="47" />
   </columns>
  </systemtable>
  <clocktable>
   <columns>
-   <clockname preferredWidth="269" />
-   <clocksource preferredWidth="268" />
-   <frequency preferredWidth="249" />
+   <clockname preferredWidth="432" />
+   <clocksource preferredWidth="431" />
+   <frequency preferredWidth="413" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
- <window width="1100" height="800" x="2889" y="61" />
+ <library
+   expandedCategories="Library/Interface Protocols/Ethernet,Project,Library/Interface Protocols,Library/Memories and Memory Controllers,Library/Interface Protocols/Ethernet/Example,Library/Memories and Memory Controllers/On-Chip,Library" />
+ <window width="1726" height="928" x="2391" y="-9" />
 </preferences>
