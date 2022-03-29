@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Thu Mar 24 15:53:42 IST 2022
+ * Generated: Tue Mar 29 06:40:40 IST 2022
  */
 
 /*
@@ -227,7 +227,7 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > shared
+    } > data1
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -257,7 +257,7 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > shared
+    } > data1
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
@@ -281,7 +281,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > shared
+    } > data1
 
     /*
      *
@@ -381,7 +381,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x1fff4;
+__alt_data_end = 0x10000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -397,4 +397,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x1fff4 );
+PROVIDE( __alt_heap_limit    = 0x10000 );

@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Thu Mar 24 18:02:31 IST 2022
+ * Generated: Tue Mar 29 06:31:40 IST 2022
  */
 
 /*

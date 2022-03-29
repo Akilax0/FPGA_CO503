@@ -1,0 +1,35 @@
+!SESSION 2022-03-24 15:11:55.601 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-24 15:13:35.300
+!MESSAGE Indexed 'producer_bsp' (81 sources, 60 headers) in 3.16 sec: 952 declarations; 2,340 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5.70%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-03-24 15:13:48.818
+!MESSAGE Indexed 'producer' (0 sources, 13 headers) in 0.05 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2022-03-24 17:54:31.606 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-24 18:03:07.968
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x41020 --id=0x0 --timestamp=1648118178]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-24 18:03:11.822
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x41020 --id=0x0 --timestamp=1648118178 /cygdrive/c/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/software/producer/producer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-24 18:05:45.899
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-24 18:05:47.430
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x41020 --id=0x0 --timestamp=1648118178]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-03-24 18:05:53.197
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x41020 --id=0x0 --timestamp=1648118178 /cygdrive/c/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/software/producer/producer.elf]

@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 24, 2022 6:00:20 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1648125020438</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\Users\akila\Documents\co503\FPGA_CO503\Lab3\part1\software\producer_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Mar 28, 2022 8:02:26 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1648477946094</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part1\software\producer_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\Users\akila\Documents\co503\FPGA_CO503\Lab3\part1\SoC.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part1\SoC.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>cpu0</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -926,22 +926,22 @@
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>
-                <regionName>shared</regionName>
+                <regionName>data0</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rwdata</sectionName>
-                <regionName>shared</regionName>
+                <regionName>data0</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.bss</sectionName>
-                <regionName>shared</regionName>
+                <regionName>data0</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.heap</sectionName>
-                <regionName>shared</regionName>
+                <regionName>data0</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.stack</sectionName>
-                <regionName>shared</regionName>
+                <regionName>data0</regionName>
         </LinkerSection>
 </sch:Settings>

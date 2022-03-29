@@ -1,7 +1,7 @@
 /*
  * 	FIFO queue for shared memory communication between niosII processors
  *
- *  	DATE		: 18-08-2016
+ *  	DATE		: 19-08-2016
  *      AUTHOR	: Isuru Nawinne
 *
 *	Structure of the FIFO:
@@ -27,17 +27,17 @@ void WRITE_FIFO_1(int *buffer)
 	writep += UNIT_SIZE;
 
 	// Update "count" in shared mem
-	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) + UNIT_SIZE);
+	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) + 0x1);
 
 	// Update the "full?" and "empty?" flags accordingly
 	// Set the full flag if FIFO is now full
 	// Reset the empty flag if FIFO now has 1 entry
-	if(writep==readp && IORD_32DIRECT(MEM_BASE,countp)== CAPACITY){
+	if(IORD_32DIRECT(MEM_BASE,countp)==CAPACITY){
 		IOWR_32DIRECT(MEM_BASE,fullp,0x1);
 	}else{
 		IOWR_32DIRECT(MEM_BASE,fullp,0x0);
 	}
-	if(writep==readp && IORD_32DIRECT(MEM_BASE,countp)== 0x0){
+	if(IORD_32DIRECT(MEM_BASE,countp)==0x0){
 		IOWR_32DIRECT(MEM_BASE,emptyp,0x1);
 	}else{
 		IOWR_32DIRECT(MEM_BASE,emptyp,0x0);
@@ -54,32 +54,33 @@ void READ_FIFO_1(int *buffer)
 	buffer = IORD_32DIRECT(MEM_BASE,readp);
 
 	// Update the read pointer
-	readp += 0x4;
+	readp += UNIT_SIZE;
 
 	// Update "count" in shared mem
-	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) - UNIT_SIZE);
+	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) - 0x1);
 
 	// Update the "full?" and "empty?" flags accordingly
 	// Set the empty flag if FIFO is now empty
 	// Reset the full flag if FIFO now has 1 entry less than capacity
-	if(writep==readp && IORD_32DIRECT(MEM_BASE,countp)== CAPACITY){
+	if(IORD_32DIRECT(MEM_BASE,countp)==CAPACITY){
 		IOWR_32DIRECT(MEM_BASE,fullp,0x1);
 	}else{
 		IOWR_32DIRECT(MEM_BASE,fullp,0x0);
 	}
-	if(writep==readp && IORD_32DIRECT(MEM_BASE,countp)== 0x0){
+	if(IORD_32DIRECT(MEM_BASE,countp)==0x0){
 		IOWR_32DIRECT(MEM_BASE,emptyp,0x1);
 	}else{
 		IOWR_32DIRECT(MEM_BASE,emptyp,0x0);
 	}
 
 }
+
 //Initialization
 void FIFO_1_INIT()
 {
 	writep = STARTP; // Initially the FIFO is empty, so start writing at the first slot
 	readp  = STARTP;
-	fullp   = 0x0;  // SET THIS OFFSET (If there are previous FIFOs in shared memory, use Prev Fifo's STARTP + Prev Fifo's size)
+	fullp   = 0x0; // SET THIS OFFSET (If there are previous FIFOs in shared memory, use Prev Fifo's STARTP + Prev Fifo's size)
 	emptyp   = fullp + UNIT_SIZE;
 	countp  = emptyp + UNIT_SIZE;
 

@@ -87,11 +87,11 @@ ACDS_VERSION := 12.1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/toplevel.jdi
+JDI_FILE := C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/toplevel.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+SOPCINFO_FILE := C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

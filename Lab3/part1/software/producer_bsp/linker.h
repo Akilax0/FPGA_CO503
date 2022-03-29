@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
- * SOPC Builder design path: C:/Users/akila/Documents/co503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
+ * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Thu Mar 24 15:50:48 IST 2022
+ * Generated: Fri Mar 25 07:11:39 IST 2022
  */
 
 /*
