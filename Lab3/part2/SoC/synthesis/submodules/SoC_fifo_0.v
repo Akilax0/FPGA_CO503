@@ -37,7 +37,7 @@ module SoC_fifo_0_single_clock_fifo (
   output           empty;
   output           full;
   output  [ 31: 0] q;
-  output  [  3: 0] usedw;
+  output  [  5: 0] usedw;
   input            aclr;
   input            clock;
   input   [ 31: 0] data;
@@ -47,7 +47,7 @@ module SoC_fifo_0_single_clock_fifo (
   wire             empty;
   wire             full;
   wire    [ 31: 0] q;
-  wire    [  3: 0] usedw;
+  wire    [  5: 0] usedw;
   scfifo single_clock_fifo
     (
       .aclr (aclr),
@@ -63,11 +63,11 @@ module SoC_fifo_0_single_clock_fifo (
 
   defparam single_clock_fifo.add_ram_output_register = "OFF",
            single_clock_fifo.intended_device_family = "CYCLONEIVE",
-           single_clock_fifo.lpm_numwords = 16,
+           single_clock_fifo.lpm_numwords = 64,
            single_clock_fifo.lpm_showahead = "OFF",
            single_clock_fifo.lpm_type = "scfifo",
            single_clock_fifo.lpm_width = 32,
-           single_clock_fifo.lpm_widthu = 4,
+           single_clock_fifo.lpm_widthu = 6,
            single_clock_fifo.overflow_checking = "ON",
            single_clock_fifo.underflow_checking = "ON",
            single_clock_fifo.use_eab = "ON";
@@ -122,19 +122,19 @@ module SoC_fifo_0_scfifo_with_controls (
 
   wire             empty;
   wire             full;
-  wire    [  4: 0] level;
+  wire    [  6: 0] level;
   wire             overflow;
   wire    [ 31: 0] q;
   wire             underflow;
-  wire    [  3: 0] usedw;
+  wire    [  5: 0] usedw;
   reg              wrclk_control_slave_almostempty_n_reg;
   wire             wrclk_control_slave_almostempty_pulse;
   wire             wrclk_control_slave_almostempty_signal;
-  reg     [  4: 0] wrclk_control_slave_almostempty_threshold_register;
+  reg     [  6: 0] wrclk_control_slave_almostempty_threshold_register;
   reg              wrclk_control_slave_almostfull_n_reg;
   wire             wrclk_control_slave_almostfull_pulse;
   wire             wrclk_control_slave_almostfull_signal;
-  reg     [  4: 0] wrclk_control_slave_almostfull_threshold_register;
+  reg     [  6: 0] wrclk_control_slave_almostfull_threshold_register;
   reg              wrclk_control_slave_empty_n_reg;
   wire             wrclk_control_slave_empty_pulse;
   wire             wrclk_control_slave_empty_signal;
@@ -156,7 +156,7 @@ module SoC_fifo_0_scfifo_with_controls (
   wire             wrclk_control_slave_full_signal;
   reg     [  5: 0] wrclk_control_slave_ienable_register;
   wire             wrclk_control_slave_irq;
-  wire    [  4: 0] wrclk_control_slave_level_register;
+  wire    [  6: 0] wrclk_control_slave_level_register;
   wire    [ 31: 0] wrclk_control_slave_read_mux;
   reg     [ 31: 0] wrclk_control_slave_readdata;
   reg              wrclk_control_slave_status_almostempty_q;
@@ -172,7 +172,7 @@ module SoC_fifo_0_scfifo_with_controls (
   wire    [  5: 0] wrclk_control_slave_status_register;
   reg              wrclk_control_slave_status_underflow_q;
   wire             wrclk_control_slave_status_underflow_signal;
-  wire    [  4: 0] wrclk_control_slave_threshold_writedata;
+  wire    [  6: 0] wrclk_control_slave_threshold_writedata;
   wire             wrreq_valid;
   //the_scfifo, which is an e_instance
   SoC_fifo_0_single_clock_fifo the_scfifo
@@ -195,8 +195,8 @@ module SoC_fifo_0_scfifo_with_controls (
   assign overflow = wrreq & full;
   assign underflow = rdreq & empty;
   assign wrclk_control_slave_threshold_writedata = (wrclk_control_slave_writedata < 1) ? 1 :
-    (wrclk_control_slave_writedata > 15) ? 15 :
-    wrclk_control_slave_writedata[4 : 0];
+    (wrclk_control_slave_writedata > 63) ? 63 :
+    wrclk_control_slave_writedata[6 : 0];
 
   assign wrclk_control_slave_event_almostfull_signal = wrclk_control_slave_almostfull_pulse;
   assign wrclk_control_slave_event_almostempty_signal = wrclk_control_slave_almostempty_pulse;
@@ -266,7 +266,7 @@ module SoC_fifo_0_scfifo_with_controls (
   always @(posedge clock or negedge reset_n)
     begin
       if (reset_n == 0)
-          wrclk_control_slave_almostfull_threshold_register <= 15;
+          wrclk_control_slave_almostfull_threshold_register <= 63;
       else if ((wrclk_control_slave_address == 4) & wrclk_control_slave_write)
           wrclk_control_slave_almostfull_threshold_register <= wrclk_control_slave_threshold_writedata;
     end
