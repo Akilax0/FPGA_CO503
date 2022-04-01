@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/SoC.sopcinfo
  *
- * Generated: Tue Mar 29 23:27:57 IST 2022
+ * Generated: Thu Mar 31 16:23:17 IST 2022
  */
 
 /*
@@ -197,35 +197,67 @@
 
 
 /*
- * fifo_0 configuration
+ * fifo_0_in_csr configuration
  *
  */
 
-#define ALT_MODULE_CLASS_fifo_0 altera_avalon_fifo
-#define FIFO_0_AVALONMM_AVALONMM_DATA_WIDTH 32
-#define FIFO_0_AVALONMM_AVALONST_DATA_WIDTH 32
-#define FIFO_0_BASE 0x31030
-#define FIFO_0_BITS_PER_SYMBOL 16
-#define FIFO_0_CHANNEL_WIDTH 8
-#define FIFO_0_ERROR_WIDTH 8
-#define FIFO_0_FIFO_DEPTH 16
-#define FIFO_0_IRQ -1
-#define FIFO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define FIFO_0_NAME "/dev/fifo_0"
-#define FIFO_0_SINGLE_CLOCK_MODE 1
-#define FIFO_0_SPAN 4
-#define FIFO_0_SYMBOLS_PER_BEAT 2
-#define FIFO_0_TYPE "altera_avalon_fifo"
-#define FIFO_0_USE_AVALONMM_READ_SLAVE 1
-#define FIFO_0_USE_AVALONMM_WRITE_SLAVE 1
-#define FIFO_0_USE_AVALONST_SINK 0
-#define FIFO_0_USE_AVALONST_SOURCE 0
-#define FIFO_0_USE_BACKPRESSURE 1
-#define FIFO_0_USE_IRQ 1
-#define FIFO_0_USE_PACKET 1
-#define FIFO_0_USE_READ_CONTROL 0
-#define FIFO_0_USE_REGISTER 0
-#define FIFO_0_USE_WRITE_CONTROL 1
+#define ALT_MODULE_CLASS_fifo_0_in_csr altera_avalon_fifo
+#define FIFO_0_IN_CSR_AVALONMM_AVALONMM_DATA_WIDTH 32
+#define FIFO_0_IN_CSR_AVALONMM_AVALONST_DATA_WIDTH 32
+#define FIFO_0_IN_CSR_BASE 0x0
+#define FIFO_0_IN_CSR_BITS_PER_SYMBOL 16
+#define FIFO_0_IN_CSR_CHANNEL_WIDTH 8
+#define FIFO_0_IN_CSR_ERROR_WIDTH 8
+#define FIFO_0_IN_CSR_FIFO_DEPTH 64
+#define FIFO_0_IN_CSR_IRQ 2
+#define FIFO_0_IN_CSR_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define FIFO_0_IN_CSR_NAME "/dev/fifo_0_in_csr"
+#define FIFO_0_IN_CSR_SINGLE_CLOCK_MODE 1
+#define FIFO_0_IN_CSR_SPAN 32
+#define FIFO_0_IN_CSR_SYMBOLS_PER_BEAT 2
+#define FIFO_0_IN_CSR_TYPE "altera_avalon_fifo"
+#define FIFO_0_IN_CSR_USE_AVALONMM_READ_SLAVE 1
+#define FIFO_0_IN_CSR_USE_AVALONMM_WRITE_SLAVE 1
+#define FIFO_0_IN_CSR_USE_AVALONST_SINK 0
+#define FIFO_0_IN_CSR_USE_AVALONST_SOURCE 0
+#define FIFO_0_IN_CSR_USE_BACKPRESSURE 1
+#define FIFO_0_IN_CSR_USE_IRQ 1
+#define FIFO_0_IN_CSR_USE_PACKET 1
+#define FIFO_0_IN_CSR_USE_READ_CONTROL 0
+#define FIFO_0_IN_CSR_USE_REGISTER 0
+#define FIFO_0_IN_CSR_USE_WRITE_CONTROL 1
+
+
+/*
+ * fifo_0_out configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_fifo_0_out altera_avalon_fifo
+#define FIFO_0_OUT_AVALONMM_AVALONMM_DATA_WIDTH 32
+#define FIFO_0_OUT_AVALONMM_AVALONST_DATA_WIDTH 32
+#define FIFO_0_OUT_BASE 0x31030
+#define FIFO_0_OUT_BITS_PER_SYMBOL 16
+#define FIFO_0_OUT_CHANNEL_WIDTH 8
+#define FIFO_0_OUT_ERROR_WIDTH 8
+#define FIFO_0_OUT_FIFO_DEPTH 64
+#define FIFO_0_OUT_IRQ -1
+#define FIFO_0_OUT_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define FIFO_0_OUT_NAME "/dev/fifo_0_out"
+#define FIFO_0_OUT_SINGLE_CLOCK_MODE 1
+#define FIFO_0_OUT_SPAN 4
+#define FIFO_0_OUT_SYMBOLS_PER_BEAT 2
+#define FIFO_0_OUT_TYPE "altera_avalon_fifo"
+#define FIFO_0_OUT_USE_AVALONMM_READ_SLAVE 1
+#define FIFO_0_OUT_USE_AVALONMM_WRITE_SLAVE 1
+#define FIFO_0_OUT_USE_AVALONST_SINK 0
+#define FIFO_0_OUT_USE_AVALONST_SOURCE 0
+#define FIFO_0_OUT_USE_BACKPRESSURE 1
+#define FIFO_0_OUT_USE_IRQ 1
+#define FIFO_0_OUT_USE_PACKET 1
+#define FIFO_0_OUT_USE_READ_CONTROL 0
+#define FIFO_0_OUT_USE_REGISTER 0
+#define FIFO_0_OUT_USE_WRITE_CONTROL 1
 
 
 /*
@@ -297,7 +329,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1648575760
+#define SYSID_TIMESTAMP 1648707914
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

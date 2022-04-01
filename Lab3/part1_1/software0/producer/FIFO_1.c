@@ -25,6 +25,8 @@ void WRITE_FIFO_1(int *buffer)
 	// Update the write pointer
 	writep += UNIT_SIZE;
 
+	writep = (writep%CAPACITY*UNIT_SIZE);
+
 	// Update "count" in shared mem
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) + 0x1);
 

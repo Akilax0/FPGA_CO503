@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 29, 2022 11:32:30 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1648576950950</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Mar 31, 2022 4:23:16 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1648723996793</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part2\software1\consumer_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part2\SoC.sopcinfo</SopcDesignFile>
@@ -851,6 +851,12 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
+                <slaveDescriptor>fifo_0_in_csr</slaveDescriptor>
+                <addressRange>0x00000000 - 0x0000001F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>ins_mem1</slaveDescriptor>
                 <addressRange>0x00010000 - 0x0001FFFF</addressRange>
                 <addressSpan>65536</addressSpan>
@@ -881,7 +887,7 @@
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>fifo_0</slaveDescriptor>
+                <slaveDescriptor>fifo_0_out</slaveDescriptor>
                 <addressRange>0x00031030 - 0x00031033</addressRange>
                 <addressSpan>4</addressSpan>
                 <attributes/>

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/SoC.sopcinfo
  *
- * Generated: Tue Mar 29 23:26:21 IST 2022
+ * Generated: Thu Mar 31 16:19:51 IST 2022
  */
 
 /*
@@ -208,7 +208,7 @@
 #define FIFO_0_IN_BITS_PER_SYMBOL 16
 #define FIFO_0_IN_CHANNEL_WIDTH 8
 #define FIFO_0_IN_ERROR_WIDTH 8
-#define FIFO_0_IN_FIFO_DEPTH 16
+#define FIFO_0_IN_FIFO_DEPTH 64
 #define FIFO_0_IN_IRQ -1
 #define FIFO_0_IN_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define FIFO_0_IN_NAME "/dev/fifo_0_in"
@@ -240,7 +240,7 @@
 #define FIFO_0_IN_CSR_BITS_PER_SYMBOL 16
 #define FIFO_0_IN_CSR_CHANNEL_WIDTH 8
 #define FIFO_0_IN_CSR_ERROR_WIDTH 8
-#define FIFO_0_IN_CSR_FIFO_DEPTH 16
+#define FIFO_0_IN_CSR_FIFO_DEPTH 64
 #define FIFO_0_IN_CSR_IRQ 2
 #define FIFO_0_IN_CSR_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define FIFO_0_IN_CSR_NAME "/dev/fifo_0_in_csr"
@@ -329,7 +329,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1648575760
+#define SYSID_TIMESTAMP 1648707914
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

@@ -12,14 +12,6 @@
    element $${FILENAME}
    {
    }
-   element jtag_uart_1.avalon_jtag_slave
-   {
-      datum baseAddress
-      {
-         value = "200744";
-         type = "String";
-      }
-   }
    element jtag_uart_0.avalon_jtag_slave
    {
       datum baseAddress
@@ -28,11 +20,11 @@
          type = "String";
       }
    }
-   element timer_1.clk
+   element jtag_uart_1.avalon_jtag_slave
    {
-      datum _tags
+      datum baseAddress
       {
-         value = "";
+         value = "200744";
          type = "String";
       }
    }
@@ -42,6 +34,14 @@
       {
          value = "0";
          type = "int";
+      }
+   }
+   element timer_1.clk
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
       }
    }
    element sysid.control_slave
@@ -172,7 +172,23 @@
          type = "String";
       }
    }
-   element data_mem1.s1
+   element ins_mem0.s1
+   {
+      datum baseAddress
+      {
+         value = "65536";
+         type = "String";
+      }
+   }
+   element timer_0.s1
+   {
+      datum baseAddress
+      {
+         value = "200704";
+         type = "String";
+      }
+   }
+   element data_mem0.s1
    {
       datum baseAddress
       {
@@ -188,14 +204,6 @@
          type = "String";
       }
    }
-   element ins_mem0.s1
-   {
-      datum baseAddress
-      {
-         value = "65536";
-         type = "String";
-      }
-   }
    element timer_1.s1
    {
       datum baseAddress
@@ -204,15 +212,7 @@
          type = "String";
       }
    }
-   element timer_0.s1
-   {
-      datum baseAddress
-      {
-         value = "200704";
-         type = "String";
-      }
-   }
-   element data_mem0.s1
+   element data_mem1.s1
    {
       datum baseAddress
       {
@@ -259,7 +259,7 @@
  <parameter name="projectName" value="MPSoC.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1648605148177" />
+ <parameter name="timeStamp" value="1648707848735" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk.clk_in" type="clock" dir="end" />
@@ -550,8 +550,8 @@
   <parameter name="tightlyCoupledInstructionMaster1AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='ins_mem1.s1' start='0x10000' end='0x20000' /><slave name='data_mem1.s1' start='0x28000' end='0x30000' /><slave name='cpu1.jtag_debug_module' start='0x30800' end='0x31000' /><slave name='fifo_0.out' start='0x31030' end='0x31034' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ins_mem1.s1' start='0x10000' end='0x20000' /><slave name='data_mem1.s1' start='0x28000' end='0x30000' /><slave name='cpu1.jtag_debug_module' start='0x30800' end='0x31000' /><slave name='timer_1.s1' start='0x31000' end='0x31020' /><slave name='sysid.control_slave' start='0x31020' end='0x31028' /><slave name='jtag_uart_1.avalon_jtag_slave' start='0x31028' end='0x31030' /><slave name='fifo_0.out' start='0x31030' end='0x31034' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='fifo_0.in_csr' start='0x0' end='0x20' /><slave name='ins_mem1.s1' start='0x10000' end='0x20000' /><slave name='data_mem1.s1' start='0x28000' end='0x30000' /><slave name='cpu1.jtag_debug_module' start='0x30800' end='0x31000' /><slave name='fifo_0.out' start='0x31030' end='0x31034' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='fifo_0.in_csr' start='0x0' end='0x20' /><slave name='ins_mem1.s1' start='0x10000' end='0x20000' /><slave name='data_mem1.s1' start='0x28000' end='0x30000' /><slave name='cpu1.jtag_debug_module' start='0x30800' end='0x31000' /><slave name='timer_1.s1' start='0x31000' end='0x31020' /><slave name='sysid.control_slave' start='0x31020' end='0x31028' /><slave name='jtag_uart_1.avalon_jtag_slave' start='0x31028' end='0x31030' /><slave name='fifo_0.out' start='0x31030' end='0x31034' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone IV E" />
   <parameter name="internalIrqMaskSystemInfo" value="65542" />
@@ -997,6 +997,22 @@
    kind="avalon"
    version="12.1"
    start="cpu0.data_master"
+   end="fifo_0.in_csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu1.instruction_master"
+   end="fifo_0.in_csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu1.data_master"
    end="fifo_0.in_csr">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />

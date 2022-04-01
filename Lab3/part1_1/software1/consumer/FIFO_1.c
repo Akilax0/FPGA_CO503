@@ -55,6 +55,7 @@ void READ_FIFO_1(int *buffer)
 
 	// Update the read pointer
 	readp += UNIT_SIZE;
+	readp = (readp%CAPACITY*UNIT_SIZE);
 
 	// Update "count" in shared mem
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) - 0x1);

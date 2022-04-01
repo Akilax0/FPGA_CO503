@@ -39,6 +39,7 @@ int producer()
 
 		printf("Producer sent [%i]\t%x\n",j,writep);
 		j+=10;
+
 	}
 
 	printf("Producer finished..\n");

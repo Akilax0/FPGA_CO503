@@ -3,6 +3,7 @@
 	<name>producer</name>
 	<comment></comment>
 	<projects>
+		<project>producer_bsp</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
