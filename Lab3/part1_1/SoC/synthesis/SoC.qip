@@ -2,7 +2,7 @@ set_global_assignment -entity "SoC" -library "SoC" -name IP_TOOL_NAME "qsys"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_TOOL_VERSION "12.1"
 set_global_assignment -entity "SoC" -library "SoC" -name IP_TOOL_ENV "qsys"
 set_global_assignment -library "SoC" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../SoC.sopcinfo"]
-set_instance_assignment -entity "SoC" -library "SoC" -name SLD_INFO "QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1648570666"
+set_instance_assignment -entity "SoC" -library "SoC" -name SLD_INFO "QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1648893454"
 set_global_assignment -library "SoC" -name MISC_FILE [file join $::quartus(qip_path) "../../SoC.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "SoC" -name MISC_FILE [file join $::quartus(qip_path) "../../SoC.qsys"]
@@ -24,8 +24,8 @@ set_global_assignment -library "SoC" -name VERILOG_FILE [file join $::quartus(qi
 set_global_assignment -library "SoC" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_traffic_limiter.sv"]
 set_global_assignment -library "SoC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_st_pipeline_base.v"]
+set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_id_router_009.sv"]
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_id_router_008.sv"]
-set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_id_router_007.sv"]
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_id_router_006.sv"]
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_id_router_004.sv"]
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_id_router_002.sv"]
@@ -40,6 +40,7 @@ set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quar
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "SoC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "SoC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_high_scale_timer_0.v"]
 set_global_assignment -library "SoC" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/SoC_shared_mem.hex"]
 set_global_assignment -library "SoC" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/SoC_shared_mem.v"]
 set_global_assignment -library "SoC" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/SoC_data_mem1.hex"]
@@ -119,12 +120,12 @@ set_global_assignment -entity "altera_reset_controller" -library "SoC" -name IP_
 set_global_assignment -entity "altera_merlin_traffic_limiter" -library "SoC" -name IP_TOOL_NAME "altera_merlin_traffic_limiter"
 set_global_assignment -entity "altera_merlin_traffic_limiter" -library "SoC" -name IP_TOOL_VERSION "12.1"
 set_global_assignment -entity "altera_merlin_traffic_limiter" -library "SoC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "SoC_id_router_009" -library "SoC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "SoC_id_router_009" -library "SoC" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "SoC_id_router_009" -library "SoC" -name IP_TOOL_ENV "qsys"
 set_global_assignment -entity "SoC_id_router_008" -library "SoC" -name IP_TOOL_NAME "altera_merlin_router"
 set_global_assignment -entity "SoC_id_router_008" -library "SoC" -name IP_TOOL_VERSION "12.1"
 set_global_assignment -entity "SoC_id_router_008" -library "SoC" -name IP_TOOL_ENV "qsys"
-set_global_assignment -entity "SoC_id_router_007" -library "SoC" -name IP_TOOL_NAME "altera_merlin_router"
-set_global_assignment -entity "SoC_id_router_007" -library "SoC" -name IP_TOOL_VERSION "12.1"
-set_global_assignment -entity "SoC_id_router_007" -library "SoC" -name IP_TOOL_ENV "qsys"
 set_global_assignment -entity "SoC_id_router_006" -library "SoC" -name IP_TOOL_NAME "altera_merlin_router"
 set_global_assignment -entity "SoC_id_router_006" -library "SoC" -name IP_TOOL_VERSION "12.1"
 set_global_assignment -entity "SoC_id_router_006" -library "SoC" -name IP_TOOL_ENV "qsys"
@@ -164,6 +165,9 @@ set_global_assignment -entity "altera_merlin_slave_translator" -library "SoC" -n
 set_global_assignment -entity "altera_merlin_master_translator" -library "SoC" -name IP_TOOL_NAME "altera_merlin_master_translator"
 set_global_assignment -entity "altera_merlin_master_translator" -library "SoC" -name IP_TOOL_VERSION "12.1"
 set_global_assignment -entity "altera_merlin_master_translator" -library "SoC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "SoC_high_scale_timer_0" -library "SoC" -name IP_TOOL_NAME "altera_avalon_timer"
+set_global_assignment -entity "SoC_high_scale_timer_0" -library "SoC" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "SoC_high_scale_timer_0" -library "SoC" -name IP_TOOL_ENV "qsys"
 set_global_assignment -entity "SoC_shared_mem" -library "SoC" -name IP_TOOL_NAME "altera_avalon_onchip_memory2"
 set_global_assignment -entity "SoC_shared_mem" -library "SoC" -name IP_TOOL_VERSION "12.1"
 set_global_assignment -entity "SoC_shared_mem" -library "SoC" -name IP_TOOL_ENV "qsys"

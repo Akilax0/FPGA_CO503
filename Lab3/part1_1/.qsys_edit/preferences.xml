@@ -10,11 +10,11 @@
  <clocktable>
   <columns>
    <clockname preferredWidth="488" />
-   <clocksource preferredWidth="487" />
-   <frequency preferredWidth="468" />
+   <clocksource preferredWidth="540" />
+   <frequency preferredWidth="522" />
   </columns>
  </clocktable>
  <library
-   expandedCategories="Library/DSP,Library/SLS/Communication,Library/Memories and Memory Controllers/External Memory Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/RLDRAM 3 Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/Memory Models,Library/SLS/Communication/USB,Library/Memories and Memory Controllers/External Memory Interfaces/LPDDR2 Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/SDRAM Interfaces,Library/Interface Protocols/Serial,Library/Memories and Memory Controllers/External Memory Interfaces/RLDRAM II Interfaces,Library/Interface Protocols,Library/Memories and Memory Controllers/On-Chip,Library/Memories and Memory Controllers/External Memory Interfaces/DDR3 Interfaces,Library,Library/SLS,Library/Memories and Memory Controllers/External Memory Interfaces/DDR Interfaces,Project,Library/Memories and Memory Controllers,Library/DSP/Video and Image Processing,Library/Memories and Memory Controllers/External Memory Interfaces/QDR II Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/DDR2 Interfaces" />
- <window width="1938" height="1038" x="-9" y="-9" />
+   expandedCategories="Library,Library/Peripherals/Microcontroller Peripherals,Project,Library/Peripherals" />
+ <window width="1918" height="918" x="74" y="94" />
 </preferences>

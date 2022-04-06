@@ -26,22 +26,28 @@ int main()
 
 int producer()
 {
+	alt_u32 sw_fast_timeA, sw_fast_timeB;
 	printf("Producer starting..\n");
 
 	FIFO_1_INIT(); // Initialize the FIFO
 
 	int j = 5;
+	sw_fast_timeA = alt_timestamp();
 	while(j<=500)
 	{
 		delay(100000);
+
 		WRITE_FIFO_1(&j); // Write to the producer-consumer fifo
+
 		delay(100000);
 
 		printf("Producer sent [%i]\t%x\n",j,writep);
+
 		j+=10;
 
 	}
-
+	sw_fast_timeB = alt_timestamp();
+	printf("Time for Write operation: %lu\n",(unsigned long)(sw_fast_timeB-sw_fast_timeA));
 	printf("Producer finished..\n");
 	return 0;
 }

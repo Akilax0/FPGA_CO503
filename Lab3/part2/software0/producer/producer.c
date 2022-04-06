@@ -34,6 +34,7 @@ int producer()
 		delay(100000);
 
 		printf("Producer sent [%i]\n",j);
+		print_status(CTRL);
 		j+=10;
 	}
 

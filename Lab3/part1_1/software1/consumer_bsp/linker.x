@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/SoC.sopcinfo
  *
- * Generated: Tue Mar 29 07:51:46 IST 2022
+ * Generated: Sat Apr 02 15:37:18 IST 2022
  */
 
 /*
@@ -50,16 +50,16 @@
 
 MEMORY
 {
-    reset : ORIGIN = 0x0, LENGTH = 32
-    ins_mem1 : ORIGIN = 0x20, LENGTH = 65504
-    data_mem1 : ORIGIN = 0x10000, LENGTH = 32768
-    shared_mem : ORIGIN = 0x20000, LENGTH = 65520
+    reset : ORIGIN = 0x10000, LENGTH = 32
+    ins_mem1 : ORIGIN = 0x10020, LENGTH = 65504
+    data_mem1 : ORIGIN = 0x28000, LENGTH = 32768
+    shared_mem : ORIGIN = 0x30000, LENGTH = 65520
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_ins_mem1 = 0x0;
-__alt_mem_data_mem1 = 0x10000;
-__alt_mem_shared_mem = 0x20000;
+__alt_mem_ins_mem1 = 0x10000;
+__alt_mem_data_mem1 = 0x28000;
+__alt_mem_shared_mem = 0x30000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -95,7 +95,7 @@ SECTIONS
      *
      */
 
-    .exceptions 0x20 : AT ( 0x20 )
+    .exceptions 0x10020 : AT ( 0x10020 )
     {
         PROVIDE (__ram_exceptions_start = ABSOLUTE(.));
         . = ALIGN(0x20);
@@ -407,7 +407,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x18000;
+__alt_data_end = 0x30000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -423,4 +423,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x18000 );
+PROVIDE( __alt_heap_limit    = 0x30000 );

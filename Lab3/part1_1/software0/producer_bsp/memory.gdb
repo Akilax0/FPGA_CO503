@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
 # SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/SoC.sopcinfo
 #
-# Generated: Tue Mar 29 07:58:22 IST 2022
+# Generated: Sat Apr 02 15:37:03 IST 2022
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,10 +47,10 @@
 # by allowing GDB to cache memory contents on the host.
 
 # ins_mem0
-memory 0x0 0x10000 cache
+memory 0x10000 0x20000 cache
 
 # shared_mem
-memory 0x20000 0x2fff0 cache
+memory 0x30000 0x3fff0 cache
 
 # data_mem0
-memory 0x30000 0x38000 cache
+memory 0x48000 0x50000 cache

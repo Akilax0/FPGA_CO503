@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/SoC.sopcinfo
  *
- * Generated: Tue Mar 29 07:51:46 IST 2022
+ * Generated: Sat Apr 02 15:37:18 IST 2022
  */
 
 /*
@@ -65,13 +65,13 @@
  *
  */
 
-#define DATA_MEM1_REGION_BASE 0x10000
+#define DATA_MEM1_REGION_BASE 0x28000
 #define DATA_MEM1_REGION_SPAN 32768
-#define INS_MEM1_REGION_BASE 0x20
+#define INS_MEM1_REGION_BASE 0x10020
 #define INS_MEM1_REGION_SPAN 65504
-#define RESET_REGION_BASE 0x0
+#define RESET_REGION_BASE 0x10000
 #define RESET_REGION_SPAN 32
-#define SHARED_MEM_REGION_BASE 0x20000
+#define SHARED_MEM_REGION_BASE 0x30000
 #define SHARED_MEM_REGION_SPAN 65520
 
 

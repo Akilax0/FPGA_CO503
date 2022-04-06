@@ -20,10 +20,12 @@ void WRITE_FIFO_1(int *buffer)
 	while(IORD_32DIRECT(MEM_BASE,fullp)==0x1){}
 
 	// Write the data to FIFO
-	IOWR_32DIRECT(MEM_BASE,writep,buffer);
-
+	IOWR_32DIRECT(MEM_BASE,writep,*buffer);
+	//printf("Producer sent [%i]\t%x\t%i\n",*buffer,writep,IORD_32DIRECT(MEM_BASE,writep));
 	// Update the write pointer
 	writep += UNIT_SIZE;
+
+	writep = writep%(CAPACITY*UNIT_SIZE);
 
 	// Update "count" in shared mem
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) + 0x1);
@@ -50,12 +52,11 @@ void READ_FIFO_1(int *buffer)
 	while(IORD_32DIRECT(MEM_BASE,emptyp)==0x1){}
 
 	// Read the data
-	*buffer = IORD_32DIRECT(MEM_BASE,readp);
-	//printf("Buffer [%i]\n",&buffer);
+	buffer = IORD_32DIRECT(MEM_BASE,readp);
 
 	// Update the read pointer
 	readp += UNIT_SIZE;
-	readp = (readp%CAPACITY*UNIT_SIZE);
+	readp = readp%(CAPACITY*UNIT_SIZE);
 
 	// Update "count" in shared mem
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) - 0x1);
@@ -84,8 +85,10 @@ void FIFO_1_INIT()
 	emptyp   = fullp + UNIT_SIZE;
 	countp  = emptyp + UNIT_SIZE;
 
+
 	// Assigning values for the flags.
 	IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
 	IOWR_32DIRECT(MEM_BASE, emptyp, 0x1); // The fifo is empty at the start
 	IOWR_32DIRECT(MEM_BASE, countp, 0x0); // The fifo is empty at the start
+
 }

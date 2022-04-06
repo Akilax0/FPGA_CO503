@@ -34,8 +34,10 @@ int consumer()
 	while(k<500)
 	{
 		READ_FIFO_1(&j);  // Read from the producer-consumer fifo
-		if(j==k)
+		if(j==k){
 			printf("Consumer succefully received [%i]\n",j);
+			print_status(CTRL);
+		}
 
 		k+=10;
 	}

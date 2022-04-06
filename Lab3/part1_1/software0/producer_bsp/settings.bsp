@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 29, 2022 9:53:45 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1648571025082</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Apr 2, 2022 3:37:02 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1648894022408</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part1_1\software0\producer_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part1_1\SoC.sopcinfo</SopcDesignFile>
@@ -26,7 +26,7 @@
                 <SettingName>hal.timestamp_timer</SettingName>
                 <Identifier>ALT_TIMESTAMP_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>timer_0</Value>
+                <Value>high_scale_timer_0</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of timestamp timer device. This device is used by Altera HAL timestamp drivers for high-resolution time measurement. This setting defines the value of ALT_TIMESTAMP_CLK in system.h.</Description>
@@ -852,37 +852,43 @@
         </Setting>
         <MemoryMap>
                 <slaveDescriptor>ins_mem0</slaveDescriptor>
-                <addressRange>0x00000000 - 0x0000FFFF</addressRange>
+                <addressRange>0x00010000 - 0x0001FFFF</addressRange>
                 <addressSpan>65536</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>shared_mem</slaveDescriptor>
-                <addressRange>0x00020000 - 0x0002FFEF</addressRange>
+                <addressRange>0x00030000 - 0x0003FFEF</addressRange>
                 <addressSpan>65520</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>data_mem0</slaveDescriptor>
-                <addressRange>0x00030000 - 0x00037FFF</addressRange>
+                <addressRange>0x00048000 - 0x0004FFFF</addressRange>
                 <addressSpan>32768</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>high_scale_timer_0</slaveDescriptor>
+                <addressRange>0x00051000 - 0x0005101F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>timer_0</slaveDescriptor>
-                <addressRange>0x00039000 - 0x0003901F</addressRange>
+                <addressRange>0x00051020 - 0x0005103F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x00039020 - 0x00039027</addressRange>
+                <addressRange>0x00051040 - 0x00051047</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00039028 - 0x0003902F</addressRange>
+                <addressRange>0x00051048 - 0x0005104F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

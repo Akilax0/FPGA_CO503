@@ -11,10 +11,29 @@
 *	___________________________________________________________________________
 */
 
-#define ALMOST_EMPTY 2
-#define ALMOST_FULL OUTPUT_FIFO_OUT_FIFO_DEPTH-5
-#include "FIFO_1.h"
 
+#include "FIFO_1.h"
+void print_status(alt_u32 control_base_address)
+{
+	printf("--------------------------------------\n");
+	printf("LEVEL = %u\n", altera_avalon_fifo_read_level(control_base_address) );
+	printf("STATUS = %u\n", altera_avalon_fifo_read_status(control_base_address,
+	ALTERA_AVALON_FIFO_STATUS_ALL) );
+	printf("EVENT = %u\n", altera_avalon_fifo_read_event(control_base_address,
+	ALTERA_AVALON_FIFO_EVENT_ALL) );
+	printf("IENABLE = %u\n", altera_avalon_fifo_read_ienable(control_base_address,
+	ALTERA_AVALON_FIFO_IENABLE_ALL) );
+	printf("ALMOSTEMPTY = %u\n",
+	altera_avalon_fifo_read_almostempty(control_base_address) );
+	printf("ALMOSTFULL = %u\n\n",
+	altera_avalon_fifo_read_almostfull(control_base_address));
+	//full
+	printf("FULL = %u\n\n",
+	altera_avalon_fifo_read_status(control_base_address,0x01));
+	//empty
+	printf("EMPTY = %u\n\n",
+	altera_avalon_fifo_read_status(control_base_address,0x02));
+}
 
 void WRITE_FIFO_1(int *buffer)
 {
@@ -22,17 +41,9 @@ void WRITE_FIFO_1(int *buffer)
 	while(altera_avalon_fifo_read_status(CTRL,0x01)){}
 
 	// Write the data to FIFO
-	altera_avalon_fifo_write_fifo(MEM_BASE,CTRL,*buffer);
-
-	// Update the write pointer
+	altera_avalon_fifo_write_fifo(DATA,CTRL,*buffer);
 
 
-	// Update "count" in shared mem
-
-
-	// Update the "full?" and "empty?" flags accordingly
-	// Set the full flag if FIFO is now full
-	// Reset the empty flag if FIFO now has 1 entry
 
 }
 
@@ -43,24 +54,15 @@ void READ_FIFO_1(int *buffer)
 	while(altera_avalon_fifo_read_status(CTRL,0x02)){}
 
 	// Read the data
-	*buffer = altera_avalon_fifo_read_fifo(MEM_BASE,CTRL);
+	*buffer = altera_avalon_fifo_read_fifo(DATA,CTRL);
 
-	// Update the read pointer
-
-
-	// Update "count" in shared mem
-
-
-	// Update the "full?" and "empty?" flags accordingly
-	// Set the empty flag if FIFO is now empty
-	// Reset the full flag if FIFO now has 1 entry less than capacity
 
 }
 
 //Initialization
 void FIFO_1_INIT()
 {
-	altera_avalon_fifo_init(MEM_BASE,0x000000,2,59);
+	altera_avalon_fifo_init(CTRL,0x000000,ALMOST_EMPTY,ALMOST_FULL);
 	/**
 	 *
 	 * address—the base address of the FIFO control slave
