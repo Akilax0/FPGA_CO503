@@ -87,8 +87,8 @@ void FIFO_1_INIT()
 
 
 	// Assigning values for the flags.
-	IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
-	IOWR_32DIRECT(MEM_BASE, emptyp, 0x1); // The fifo is empty at the start
-	IOWR_32DIRECT(MEM_BASE, countp, 0x0); // The fifo is empty at the start
+//	IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
+//	IOWR_32DIRECT(MEM_BASE, emptyp, 0x1); // The fifo is empty at the start
+//	IOWR_32DIRECT(MEM_BASE, countp, 0x0); // The fifo is empty at the start
 
 }

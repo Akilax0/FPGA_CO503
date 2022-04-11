@@ -1085,3 +1085,68 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY com.altera.sbtgui.launch 1 0 2022-04-06 07:29:09.087
 !MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]
+!SESSION 2022-04-11 14:02:37.041 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:03:43.306
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:03:45.348
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:08:12.332
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:08:12.882
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:08:14.838
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:09:18.458
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:09:19.029
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:09:20.959
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:10:21.154
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:10:23.079
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:11:05.270
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:11:05.834
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:11:07.762
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:18:33.333
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 14:18:35.272
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]
+!SESSION 2022-04-11 20:20:44.217 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:22:48.730
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:22:50.590
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software0/producer/producer.elf]

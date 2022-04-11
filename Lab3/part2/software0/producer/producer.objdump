@@ -991,9 +991,7 @@ void WRITE_FIFO_1(int *buffer)
    10334:	000b883a 	mov	r5,zero
    10338:	001ab400 	call	1ab40 <altera_avalon_fifo_write_fifo>
 
-	// Update the "full?" and "empty?" flags accordingly
-	// Set the full flag if FIFO is now full
-	// Reset the empty flag if FIFO now has 1 entry
+
 
 }
    1033c:	e037883a 	mov	sp,fp
@@ -1030,9 +1028,6 @@ void READ_FIFO_1(int *buffer)
    1038c:	e0bfff17 	ldw	r2,-4(fp)
    10390:	10c00015 	stw	r3,0(r2)
 
-	// Update the "full?" and "empty?" flags accordingly
-	// Set the empty flag if FIFO is now empty
-	// Reset the full flag if FIFO now has 1 entry less than capacity
 
 }
    10394:	e037883a 	mov	sp,fp

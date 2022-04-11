@@ -24,8 +24,10 @@ void WRITE_FIFO_1(int *buffer)
 	//printf("Producer sent [%i]\t%x\t%i\n",*buffer,writep,IORD_32DIRECT(MEM_BASE,writep));
 	// Update the write pointer
 	writep += UNIT_SIZE;
-
-	writep = writep%(CAPACITY*UNIT_SIZE);
+//
+	if(writep==(CAPACITY*UNIT_SIZE)+STARTP){
+		writep = STARTP;
+	}
 
 	// Update "count" in shared mem
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) + 0x1);

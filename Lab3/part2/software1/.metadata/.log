@@ -281,3 +281,34 @@ C Model Exception: C Model Status [Element FIFO_1.h does not exist.]
 
 !ENTRY com.altera.sbtgui.launch 1 0 2022-04-06 06:18:36.349
 !MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x31020 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/software1/consumer/consumer.elf]
+!SESSION 2022-04-11 20:28:47.636 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:37:37.109
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x31020]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:37:39.302
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x31020 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:38:02.885
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:38:03.433
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x31020]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:38:05.324
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x31020 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:38:35.228
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:38:35.726
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x31020]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:38:37.578
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x31020 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/software1/consumer/consumer.elf]
