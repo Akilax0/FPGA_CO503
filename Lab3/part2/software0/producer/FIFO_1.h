@@ -29,10 +29,10 @@
 #define OUTPUT_FIFO_OUT_FIFO_DEPTH 64
 #define ALMOST_EMPTY 2
 #define ALMOST_FULL OUTPUT_FIFO_OUT_FIFO_DEPTH-5
-#define CTRL 0x00000000
-#define DATA 0x00031030
-#define IN_BASE 0x00031030 // Base address of the memory device. SET THIS PROPERLY
-#define OUT_BASE 0x00031030 // Base address of the memory device. SET THIS PROPERLY
+#define CTRL 0x00031060
+//#define DATA 0x00031030
+#define IN_BASE 0x000310b4 // Base address of the memory device. SET THIS PROPERLY
+#define OUT_BASE 0x0003102c // Base address of the memory device. SET THIS PROPERLY
 #define CAPACITY 64 // Depth of the fifo. SET THIS AS REQUIRED
 #define UNIT_SIZE 32 // Size of an entry in bytes 32 
 #define STARTP 0xC // Start of the actual fifo storage area. (3 words from the start of "full", just after "count") This address is relative to the MEM_BASE. (Prev Fifo's STARTP + 0x14 + Prev Fifo's size)

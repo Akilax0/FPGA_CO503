@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/SoC.sopcinfo
  *
- * Generated: Thu Mar 31 16:19:51 IST 2022
+ * Generated: Wed Apr 13 11:41:54 IST 2022
  */
 
 /*
@@ -147,19 +147,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x31028
+#define ALT_STDERR_BASE 0x310a8
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x31028
+#define ALT_STDIN_BASE 0x310a8
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x31028
+#define ALT_STDOUT_BASE 0x310a8
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -204,7 +204,7 @@
 #define ALT_MODULE_CLASS_fifo_0_in altera_avalon_fifo
 #define FIFO_0_IN_AVALONMM_AVALONMM_DATA_WIDTH 32
 #define FIFO_0_IN_AVALONMM_AVALONST_DATA_WIDTH 32
-#define FIFO_0_IN_BASE 0x31030
+#define FIFO_0_IN_BASE 0x310b4
 #define FIFO_0_IN_BITS_PER_SYMBOL 16
 #define FIFO_0_IN_CHANNEL_WIDTH 8
 #define FIFO_0_IN_ERROR_WIDTH 8
@@ -236,7 +236,7 @@
 #define ALT_MODULE_CLASS_fifo_0_in_csr altera_avalon_fifo
 #define FIFO_0_IN_CSR_AVALONMM_AVALONMM_DATA_WIDTH 32
 #define FIFO_0_IN_CSR_AVALONMM_AVALONST_DATA_WIDTH 32
-#define FIFO_0_IN_CSR_BASE 0x0
+#define FIFO_0_IN_CSR_BASE 0x31060
 #define FIFO_0_IN_CSR_BITS_PER_SYMBOL 16
 #define FIFO_0_IN_CSR_CHANNEL_WIDTH 8
 #define FIFO_0_IN_CSR_ERROR_WIDTH 8
@@ -267,7 +267,33 @@
 
 #define ALT_MAX_FD 32
 #define ALT_SYS_CLK TIMER_0
-#define ALT_TIMESTAMP_CLK none
+#define ALT_TIMESTAMP_CLK HIGH_SCALE_TIMER0
+
+
+/*
+ * high_scale_timer0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_high_scale_timer0 altera_avalon_timer
+#define HIGH_SCALE_TIMER0_ALWAYS_RUN 0
+#define HIGH_SCALE_TIMER0_BASE 0x31040
+#define HIGH_SCALE_TIMER0_COUNTER_SIZE 32
+#define HIGH_SCALE_TIMER0_FIXED_PERIOD 0
+#define HIGH_SCALE_TIMER0_FREQ 50000000u
+#define HIGH_SCALE_TIMER0_IRQ 3
+#define HIGH_SCALE_TIMER0_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define HIGH_SCALE_TIMER0_LOAD_VALUE 49ull
+#define HIGH_SCALE_TIMER0_MULT 1.0E-6
+#define HIGH_SCALE_TIMER0_NAME "/dev/high_scale_timer0"
+#define HIGH_SCALE_TIMER0_PERIOD 1
+#define HIGH_SCALE_TIMER0_PERIOD_UNITS "us"
+#define HIGH_SCALE_TIMER0_RESET_OUTPUT 0
+#define HIGH_SCALE_TIMER0_SNAPSHOT 1
+#define HIGH_SCALE_TIMER0_SPAN 32
+#define HIGH_SCALE_TIMER0_TICKS_PER_SEC 1000000u
+#define HIGH_SCALE_TIMER0_TIMEOUT_PULSE_OUTPUT 0
+#define HIGH_SCALE_TIMER0_TYPE "altera_avalon_timer"
 
 
 /*
@@ -305,7 +331,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x31028
+#define JTAG_UART_0_BASE 0x310a8
 #define JTAG_UART_0_IRQ 16
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -323,13 +349,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x31020
+#define SYSID_BASE 0x310a0
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1648707914
+#define SYSID_TIMESTAMP 1649830190
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -340,7 +366,7 @@
 
 #define ALT_MODULE_CLASS_timer_0 altera_avalon_timer
 #define TIMER_0_ALWAYS_RUN 0
-#define TIMER_0_BASE 0x31000
+#define TIMER_0_BASE 0x31080
 #define TIMER_0_COUNTER_SIZE 32
 #define TIMER_0_FIXED_PERIOD 0
 #define TIMER_0_FREQ 50000000u

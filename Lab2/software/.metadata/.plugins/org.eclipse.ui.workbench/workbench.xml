@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="37" version="2.0">
+<workbench progressCount="35" version="2.0">
 <workbenchAdvisor/>
-<window height="851" width="1171" x="200" y="101">
+<window height="851" maximized="true" width="1171" x="163" y="-17">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -36,9 +36,9 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" partName="system.h" path="C:/Users/akila/Documents/co503/repo/FPGA_CO503/Lab2/software/crc_bsp/system.h" title="system.h" tooltip="crc_bsp/system.h" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" partName="system.h" path="C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab2/software/crc_bsp/system.h" title="system.h" tooltip="crc_bsp/system.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc_bsp/system.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3949" selectionTopPixel="2350"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="ci_crc.h" partName="ci_crc.h" path="C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab2/software/crc/ci_crc.h" title="ci_crc.h" tooltip="crc/ci_crc.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc/ci_crc.h"/>
@@ -48,9 +48,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc/ci_crc.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="565" selectionTopPixel="887"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="crc_main.c" partName="crc_main.c" path="C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab2/software/crc/crc_main.c" title="crc_main.c" tooltip="crc/crc_main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="crc_main.c" partName="crc_main.c" path="C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab2/software/crc/crc_main.c" title="crc_main.c" tooltip="crc/crc_main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/crc/crc_main.c"/>
-<editorState selectionHorizontalPixel="508" selectionLength="44" selectionOffset="11074" selectionTopPixel="4234"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6762" selectionTopPixel="3861"/>
 </editor>
 </editors>
 <views>
@@ -61,10 +61,6 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (2 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="120" org.eclipse.ui.ide.markerType="120" org.eclipse.ui.ide.pathField="160" org.eclipse.ui.ide.resourceField="120" org.eclipse.ui.ide.severityAndDescriptionField="400"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -82,7 +78,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -293,6 +289,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc/ci_crc.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc/ci_crc.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc/crc_main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/crc_bsp/system.h"/>
 </editors>
 <item historyLabel="system.h" index="0">
 <position info="not_deleted" x="3958" y="24"/>
@@ -345,8 +342,11 @@
 <item historyLabel="ci_crc.c" index="5">
 <position info="not_deleted" x="565" y="0"/>
 </item>
-<item active="true" historyLabel="crc_main.c" index="6">
+<item historyLabel="crc_main.c" index="6">
 <position info="not_deleted" x="6762" y="0"/>
+</item>
+<item active="true" historyLabel="system.h" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

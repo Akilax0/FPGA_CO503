@@ -1,9 +1,9 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="56aa94f3328548fb7c2e"/>
+    <hash md5_digest_80b="5c27507599abb3bbcac5"/>
   </project>
   <file_info>
-    <file checksum="0x00A59D1D" device="EP4CE115F29C7" path="toplevel.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x00A66A8C" device="EP4CE115F29C7" path="toplevel.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info ir_width="2" node_count="4"/>
   <node_info>
@@ -277,7 +277,7 @@
   <sld_infos>
     <sld_info hpath="SoC:inst" name="inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1649691264"/>
+        <assignment_value text="QSYS_NAME SoC HAS_SOPCINFO 1 GENERATION_ID 1649824396"/>
       </assignment_values>
       <parameters/>
     </sld_info>

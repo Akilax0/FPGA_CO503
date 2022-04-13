@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="431" />
+   <irq preferredWidth="111" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="505" />
+   <clocksource preferredWidth="505" />
+   <frequency preferredWidth="485" />
+  </columns>
+ </clocktable>
+ <library
+   expandedCategories="Library/Interface Protocols,Library/Memories and Memory Controllers,Project,Library/Memories and Memory Controllers/On-Chip,Library/Interface Protocols/Ethernet,Library,Library/Interface Protocols/Ethernet/Example" />
+ <window width="1938" height="1038" x="-9" y="-9" />
+</preferences>

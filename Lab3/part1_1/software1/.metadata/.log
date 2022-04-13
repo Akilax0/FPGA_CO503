@@ -1275,3 +1275,175 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY com.altera.sbtgui.launch 1 0 2022-04-11 20:22:46.807
 !MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+!SESSION 2022-04-13 10:13:50.968 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:39:18.084
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:39:20.020
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:41:36.858
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:41:37.391
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:41:39.328
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:44:38.537
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:44:39.030
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:44:40.961
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:47:59.448
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:47:59.948
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:48:01.865
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:49:19.887
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:49:20.417
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:49:22.324
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:50:07.452
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:50:07.976
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:50:09.908
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:53:59.733
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:54:00.280
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:54:02.259
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:59:31.267
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:59:31.807
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 10:59:33.794
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:00:11.582
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:00:12.092
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:00:14.010
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:01:05.164
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:01:07.109
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:01:49.851
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:01:50.360
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:01:52.300
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:09:52.102
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:09:52.648
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:09:54.580
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:12:56.466
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:12:56.980
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:12:58.877
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:19:03.843
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:19:04.426
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:19:06.373
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:20:46.356
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:20:47.046
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:20:48.987
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:21:06.351
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:21:06.852
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:21:08.780
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:24:56.383
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:24:56.874
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:24:58.775
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:25:35.860
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:25:36.367
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:25:38.307
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:28:50.957
+!MESSAGE Terminated Launch with connection: 11USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:28:51.502
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --stop --accept-bad-sysid --sidp=0x51040]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2022-04-13 11:28:53.505
+!MESSAGE Executing: [C:/altera/12.1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=1 --go --accept-bad-sysid --sidp=0x51040 /cygdrive/c/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/software1/consumer/consumer.elf]

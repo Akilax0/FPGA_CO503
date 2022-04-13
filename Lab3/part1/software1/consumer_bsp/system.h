@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Mon Apr 11 21:16:00 IST 2022
+ * Generated: Wed Apr 13 09:56:51 IST 2022
  */
 
 /*
@@ -201,8 +201,8 @@
  */
 
 #define ALT_MAX_FD 32
-#define ALT_SYS_CLK HIGH_SCALE_TIMER_1
-#define ALT_TIMESTAMP_CLK none
+#define ALT_SYS_CLK TIMER_1
+#define ALT_TIMESTAMP_CLK HIGH_SCALE_TIMER_1
 
 
 /*

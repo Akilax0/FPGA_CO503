@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1/SoC.sopcinfo
  *
- * Generated: Mon Apr 11 21:16:00 IST 2022
+ * Generated: Wed Apr 13 09:56:51 IST 2022
  */
 
 /*
@@ -95,7 +95,7 @@ SECTIONS
      *
      */
 
-    .exceptions : AT ( 0x30000 )
+    .exceptions 0x10020 : AT ( 0x10020 )
     {
         PROVIDE (__ram_exceptions_start = ABSOLUTE(.));
         . = ALIGN(0x20);
@@ -224,16 +224,9 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(4);
-    } > shared_mem = 0x3a880100 /* Nios II NOP instruction */
+    } > ins_mem1 = 0x3a880100 /* Nios II NOP instruction */
 
-    /*
-     *
-     * This section's LMA is set to the .text region.
-     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
-     *
-     */
-
-    .rodata LOADADDR (.text) + SIZEOF (.text) : AT ( LOADADDR (.text) + SIZEOF (.text) )
+    .rodata :
     {
         PROVIDE (__ram_rodata_start = ABSOLUTE(.));
         . = ALIGN(4);
@@ -241,7 +234,7 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(4);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > shared_mem
+    } > data_mem1
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
@@ -250,13 +243,9 @@ SECTIONS
      * This section's LMA is set to the .text region.
      * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
      *
-     * .rwdata region equals the .text region, and is set to be loaded into .text region.
-     * This requires two copies of .rwdata in the .text region. One read writable at VMA.
-     * and one read-only at LMA. crt0 will copy from LMA to VMA on reset
-     *
      */
 
-    .rwdata LOADADDR (.rodata) + SIZEOF (.rodata) : AT ( LOADADDR (.rodata) + SIZEOF (.rodata)+ SIZEOF (.rwdata) )
+    .rwdata : AT ( LOADADDR (.text) + SIZEOF (.text) )
     {
         PROVIDE (__ram_rwdata_start = ABSOLUTE(.));
         . = ALIGN(4);
@@ -275,18 +264,11 @@ SECTIONS
         _edata = ABSOLUTE(.);
         PROVIDE (edata = ABSOLUTE(.));
         PROVIDE (__ram_rwdata_end = ABSOLUTE(.));
-    } > shared_mem
+    } > data_mem1
 
     PROVIDE (__flash_rwdata_start = LOADADDR(.rwdata));
 
-    /*
-     *
-     * This section's LMA is set to the .text region.
-     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
-     *
-     */
-
-    .bss LOADADDR (.rwdata) + SIZEOF (.rwdata) : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
+    .bss :
     {
         __bss_start = ABSOLUTE(.);
         PROVIDE (__sbss_start = ABSOLUTE(.));
@@ -306,7 +288,7 @@ SECTIONS
 
         . = ALIGN(4);
         __bss_end = ABSOLUTE(.);
-    } > shared_mem
+    } > data_mem1
 
     /*
      *
@@ -331,7 +313,7 @@ SECTIONS
      *
      */
 
-    .ins_mem1 : AT ( LOADADDR (.bss) + SIZEOF (.bss) )
+    .ins_mem1 LOADADDR (.rwdata) + SIZEOF (.rwdata) : AT ( LOADADDR (.rwdata) + SIZEOF (.rwdata) )
     {
         PROVIDE (_alt_partition_ins_mem1_start = ABSOLUTE(.));
         *(.ins_mem1. ins_mem1.*)
@@ -354,6 +336,9 @@ SECTIONS
         *(.data_mem1. data_mem1.*)
         . = ALIGN(4);
         PROVIDE (_alt_partition_data_mem1_end = ABSOLUTE(.));
+        _end = ABSOLUTE(.);
+        end = ABSOLUTE(.);
+        __alt_stack_base = ABSOLUTE(.);
     } > data_mem1
 
     PROVIDE (_alt_partition_data_mem1_load_addr = LOADADDR(.data_mem1));
@@ -365,15 +350,12 @@ SECTIONS
      *
      */
 
-    .shared_mem LOADADDR (.data_mem1) + SIZEOF (.data_mem1) : AT ( LOADADDR (.data_mem1) + SIZEOF (.data_mem1) )
+    .shared_mem : AT ( LOADADDR (.data_mem1) + SIZEOF (.data_mem1) )
     {
         PROVIDE (_alt_partition_shared_mem_start = ABSOLUTE(.));
         *(.shared_mem. shared_mem.*)
         . = ALIGN(4);
         PROVIDE (_alt_partition_shared_mem_end = ABSOLUTE(.));
-        _end = ABSOLUTE(.);
-        end = ABSOLUTE(.);
-        __alt_stack_base = ABSOLUTE(.);
     } > shared_mem
 
     PROVIDE (_alt_partition_shared_mem_load_addr = LOADADDR(.shared_mem));
@@ -425,7 +407,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x3fff0;
+__alt_data_end = 0x30000;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -441,4 +423,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x3fff0 );
+PROVIDE( __alt_heap_limit    = 0x30000 );

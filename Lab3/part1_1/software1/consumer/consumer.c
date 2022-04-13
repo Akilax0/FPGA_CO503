@@ -15,7 +15,12 @@ int consumer();
 
 int main()
 {
+	alt_u32 sw_fast_timeA, sw_fast_timeB;
+	sw_fast_timeA = alt_timestamp();
 	consumer();
+	sw_fast_timeB = alt_timestamp();
+
+	printf("Time for Read operation: %lu\n",(unsigned long)(sw_fast_timeB-sw_fast_timeA));
 	
 	while(1) { }
 //	printf("consumer starting..\n");
@@ -35,18 +40,15 @@ int consumer()
 
 	int j = 0;
 	int k = 5;
-	hw_fast_timeA = alt_timestamp();
 	while(k<500)
 	{
 		READ_FIFO_1(&j);  // Read from the producer-consumer fifo
-		if(j==k)
+		/*if(j==k)*/
 			printf("Consumer succefully received [%i]\t%x\n",j,readp);
 
 
 		k+=10;
 	}
-	hw_fast_timeB = alt_timestamp();
-	printf("Time for Read operation: %lu\n",(unsigned long)(hw_fast_timeB-hw_fast_timeA));
 	printf("Consumer finished..\n");
 	return 0;
 }

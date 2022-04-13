@@ -30,7 +30,7 @@
 //   output_name:         SoC_cmd_xbar_demux
 //   ST_DATA_W:           94
 //   ST_CHANNEL_W:        14
-//   NUM_OUTPUTS:         4
+//   NUM_OUTPUTS:         5
 //   VALID_WIDTH:         14
 // ------------------------------------------
 
@@ -83,6 +83,13 @@ module SoC_cmd_xbar_demux
     output reg                      src3_endofpacket,
     input                           src3_ready,
 
+    output reg                      src4_valid,
+    output reg [94-1    : 0] src4_data, // ST_DATA_W=94
+    output reg [14-1 : 0] src4_channel, // ST_CHANNEL_W=14
+    output reg                      src4_startofpacket,
+    output reg                      src4_endofpacket,
+    input                           src4_ready,
+
 
     // -------------------
     // Clock & Reset
@@ -94,7 +101,7 @@ module SoC_cmd_xbar_demux
 
 );
 
-    localparam NUM_OUTPUTS = 4;
+    localparam NUM_OUTPUTS = 5;
     wire [NUM_OUTPUTS - 1 : 0] ready_vector;
 
     // -------------------
@@ -129,6 +136,13 @@ module SoC_cmd_xbar_demux
 
         src3_valid         = sink_channel[3] && sink_valid[3];
 
+        src4_data          = sink_data;
+        src4_startofpacket = sink_startofpacket;
+        src4_endofpacket   = sink_endofpacket;
+        src4_channel       = sink_channel >> NUM_OUTPUTS;
+
+        src4_valid         = sink_channel[4] && sink_valid[4];
+
     end
 
     // -------------------
@@ -138,8 +152,9 @@ module SoC_cmd_xbar_demux
     assign ready_vector[1] = src1_ready;
     assign ready_vector[2] = src2_ready;
     assign ready_vector[3] = src3_ready;
+    assign ready_vector[4] = src4_ready;
 
-    assign sink_ready = |(sink_channel & {{10{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+    assign sink_ready = |(sink_channel & {{9{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
 
 endmodule
 

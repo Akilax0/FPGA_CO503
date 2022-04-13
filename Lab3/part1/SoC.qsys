@@ -156,19 +156,27 @@
          type = "String";
       }
    }
-   element timer_0.s1
+   element timer_1.s1
    {
       datum baseAddress
       {
-         value = "331808";
+         value = "266272";
          type = "String";
       }
    }
-   element data_mem1.s1
+   element ins_mem1.s1
    {
       datum baseAddress
       {
-         value = "163840";
+         value = "65536";
+         type = "String";
+      }
+   }
+   element shared_mem.s1
+   {
+      datum baseAddress
+      {
+         value = "196608";
          type = "String";
       }
    }
@@ -180,11 +188,19 @@
          type = "String";
       }
    }
-   element ins_mem1.s1
+   element data_mem0.s1
    {
       datum baseAddress
       {
-         value = "65536";
+         value = "294912";
+         type = "String";
+      }
+   }
+   element data_mem1.s1
+   {
+      datum baseAddress
+      {
+         value = "163840";
          type = "String";
       }
    }
@@ -201,27 +217,11 @@
          type = "String";
       }
    }
-   element timer_1.s1
+   element timer_0.s1
    {
       datum baseAddress
       {
-         value = "266272";
-         type = "String";
-      }
-   }
-   element shared_mem.s1
-   {
-      datum baseAddress
-      {
-         value = "196608";
-         type = "String";
-      }
-   }
-   element data_mem0.s1
-   {
-      datum baseAddress
-      {
-         value = "294912";
+         value = "331808";
          type = "String";
       }
    }
@@ -277,10 +277,10 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="MPSOC.qpf" />
+ <parameter name="projectName" value="part1.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1648893329265" />
+ <parameter name="timeStamp" value="1649823639335" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk.clk_in" type="clock" dir="end" />

@@ -13,8 +13,16 @@ int producer();
 
 int main()
 {
+
+	alt_u32 sw_fast_timeA, sw_fast_timeB;
+	alt_timestamp_start();
+	sw_fast_timeA = alt_timestamp();
+
 	producer();
 
+	sw_fast_timeB = alt_timestamp();
+
+	printf("Time for Write operation: %.2lu ms\n",1000*((unsigned long)(sw_fast_timeB-sw_fast_timeA))/((unsigned long)alt_timestamp_freq()));
 	while(1) { }
 	
 //	printf("Producer starting..\n");
@@ -26,13 +34,11 @@ int main()
 
 int producer()
 {
-	alt_u32 sw_fast_timeA, sw_fast_timeB;
 	printf("Producer starting..\n");
 
 	FIFO_1_INIT(); // Initialize the FIFO
 
 	int j = 5;
-	sw_fast_timeA = alt_timestamp();
 	while(j<=500)
 	{
 		delay(100000);
@@ -46,8 +52,7 @@ int producer()
 		j+=10;
 
 	}
-	sw_fast_timeB = alt_timestamp();
-	printf("Time for Write operation: %lu\n",(unsigned long)(sw_fast_timeB-sw_fast_timeA));
+
 	printf("Producer finished..\n");
 	return 0;
 }

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/SoC.sopcinfo
  *
- * Generated: Tue Mar 29 23:26:21 IST 2022
+ * Generated: Wed Apr 13 11:41:54 IST 2022
  */
 
 /*
@@ -72,6 +72,7 @@ ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( CPU0, cpu0);
 ALTERA_AVALON_FIFO_INSTANCE ( FIFO_0, fifo_0);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART_0, jtag_uart_0);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
+ALTERA_AVALON_TIMER_INSTANCE ( HIGH_SCALE_TIMER0, high_scale_timer0);
 ALTERA_AVALON_TIMER_INSTANCE ( TIMER_0, timer_0);
 
 /*
@@ -95,6 +96,7 @@ void alt_irq_init ( const void* base )
 
 void alt_sys_init( void )
 {
+    ALTERA_AVALON_TIMER_INIT ( HIGH_SCALE_TIMER0, high_scale_timer0);
     ALTERA_AVALON_TIMER_INIT ( TIMER_0, timer_0);
     ALTERA_AVALON_FIFO_INIT ( FIFO_0, fifo_0);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART_0, jtag_uart_0);

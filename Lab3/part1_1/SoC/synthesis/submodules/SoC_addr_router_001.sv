@@ -181,26 +181,26 @@ module SoC_addr_router_001
 
         // ( 0x51000 .. 0x51020 )
         if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h51000 ) begin
-            src_channel = 14'b10000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
+            src_channel = 14'b00010000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
         end
 
         // ( 0x51020 .. 0x51040 )
         if ( {address[RG:PAD5],{PAD5{1'b0}}} == 19'h51020 ) begin
-            src_channel = 14'b00100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
-        end
-
-        // ( 0x51040 .. 0x51048 )
-        if ( {address[RG:PAD6],{PAD6{1'b0}}} == 19'h51040 ) begin
             src_channel = 14'b01000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
         end
 
+        // ( 0x51040 .. 0x51048 )
+        if ( {address[RG:PAD6],{PAD6{1'b0}}} == 19'h51040 ) begin
+            src_channel = 14'b10000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
+        end
+
         // ( 0x51048 .. 0x51050 )
         if ( {address[RG:PAD7],{PAD7{1'b0}}} == 19'h51048 ) begin
-            src_channel = 14'b00010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_channel = 14'b00100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
         end
 
 end

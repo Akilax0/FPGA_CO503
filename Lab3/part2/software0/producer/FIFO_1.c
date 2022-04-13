@@ -35,14 +35,14 @@ void print_status(alt_u32 control_base_address)
 	altera_avalon_fifo_read_status(control_base_address,0x02));
 }
 
+
 void WRITE_FIFO_1(int *buffer)
 {
 	// Wait if the fifo is full
 	while(altera_avalon_fifo_read_status(CTRL,0x01)){}
 
 	// Write the data to FIFO
-	altera_avalon_fifo_write_fifo(DATA,CTRL,*buffer);
-
+	altera_avalon_fifo_write_fifo(IN_BASE,CTRL,*buffer);
 
 
 }
@@ -54,7 +54,7 @@ void READ_FIFO_1(int *buffer)
 	while(altera_avalon_fifo_read_status(CTRL,0x02)){}
 
 	// Read the data
-	*buffer = altera_avalon_fifo_read_fifo(DATA,CTRL);
+	*buffer = altera_avalon_fifo_read_fifo(OUT_BASE,CTRL);
 
 
 }

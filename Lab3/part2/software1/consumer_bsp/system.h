@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/SoC.sopcinfo
  *
- * Generated: Thu Mar 31 16:23:17 IST 2022
+ * Generated: Wed Apr 13 11:43:10 IST 2022
  */
 
 /*
@@ -147,19 +147,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_1"
-#define ALT_STDERR_BASE 0x31028
+#define ALT_STDERR_BASE 0x31020
 #define ALT_STDERR_DEV jtag_uart_1
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_1"
-#define ALT_STDIN_BASE 0x31028
+#define ALT_STDIN_BASE 0x31020
 #define ALT_STDIN_DEV jtag_uart_1
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_1"
-#define ALT_STDOUT_BASE 0x31028
+#define ALT_STDOUT_BASE 0x31020
 #define ALT_STDOUT_DEV jtag_uart_1
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -204,7 +204,7 @@
 #define ALT_MODULE_CLASS_fifo_0_in_csr altera_avalon_fifo
 #define FIFO_0_IN_CSR_AVALONMM_AVALONMM_DATA_WIDTH 32
 #define FIFO_0_IN_CSR_AVALONMM_AVALONST_DATA_WIDTH 32
-#define FIFO_0_IN_CSR_BASE 0x0
+#define FIFO_0_IN_CSR_BASE 0x31060
 #define FIFO_0_IN_CSR_BITS_PER_SYMBOL 16
 #define FIFO_0_IN_CSR_CHANNEL_WIDTH 8
 #define FIFO_0_IN_CSR_ERROR_WIDTH 8
@@ -236,7 +236,7 @@
 #define ALT_MODULE_CLASS_fifo_0_out altera_avalon_fifo
 #define FIFO_0_OUT_AVALONMM_AVALONMM_DATA_WIDTH 32
 #define FIFO_0_OUT_AVALONMM_AVALONST_DATA_WIDTH 32
-#define FIFO_0_OUT_BASE 0x31030
+#define FIFO_0_OUT_BASE 0x3102c
 #define FIFO_0_OUT_BITS_PER_SYMBOL 16
 #define FIFO_0_OUT_CHANNEL_WIDTH 8
 #define FIFO_0_OUT_ERROR_WIDTH 8
@@ -305,7 +305,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_1 altera_avalon_jtag_uart
-#define JTAG_UART_1_BASE 0x31028
+#define JTAG_UART_1_BASE 0x31020
 #define JTAG_UART_1_IRQ 16
 #define JTAG_UART_1_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_1_NAME "/dev/jtag_uart_1"
@@ -323,13 +323,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x31020
+#define SYSID_BASE 0x310a0
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1648707914
+#define SYSID_TIMESTAMP 1649830190
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

@@ -52,11 +52,13 @@ void READ_FIFO_1(int *buffer)
 	while(IORD_32DIRECT(MEM_BASE,emptyp)==0x1){}
 
 	// Read the data
-	buffer = IORD_32DIRECT(MEM_BASE,readp);
+	*buffer = IORD_32DIRECT(MEM_BASE,readp);
 
 	// Update the read pointer
 	readp += UNIT_SIZE;
-	readp = readp%(CAPACITY*UNIT_SIZE);
+	if(readp==(CAPACITY*UNIT_SIZE)+STARTP){
+		readp = STARTP;
+	}
 
 	// Update "count" in shared mem
 	IOWR_32DIRECT(MEM_BASE, countp, IORD_32DIRECT(MEM_BASE,countp) - 0x1);
@@ -87,8 +89,8 @@ void FIFO_1_INIT()
 
 
 	// Assigning values for the flags.
-//	IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
-//	IOWR_32DIRECT(MEM_BASE, emptyp, 0x1); // The fifo is empty at the start
-//	IOWR_32DIRECT(MEM_BASE, countp, 0x0); // The fifo is empty at the start
+	//IOWR_32DIRECT(MEM_BASE, fullp, 0x0);
+	//IOWR_32DIRECT(MEM_BASE, emptyp, 0x1); // The fifo is empty at the start
+	//IOWR_32DIRECT(MEM_BASE, countp, 0x0); // The fifo is empty at the start
 
 }

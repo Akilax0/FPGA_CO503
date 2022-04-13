@@ -107,12 +107,13 @@ module SoC_addr_router
     localparam PAD1 = log2ceil(64'h40000 - 64'h30000);
     localparam PAD2 = log2ceil(64'h50000 - 64'h48000);
     localparam PAD3 = log2ceil(64'h51000 - 64'h50800);
+    localparam PAD4 = log2ceil(64'h51020 - 64'h51000);
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h51000;
+    localparam ADDR_RANGE = 64'h51020;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -153,26 +154,32 @@ module SoC_addr_router
 
         // ( 0x10000 .. 0x20000 )
         if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h10000 ) begin
-            src_channel = 14'b0010;
+            src_channel = 14'b00010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
         end
 
         // ( 0x30000 .. 0x40000 )
         if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h30000 ) begin
-            src_channel = 14'b0100;
+            src_channel = 14'b00100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
         end
 
         // ( 0x48000 .. 0x50000 )
         if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h48000 ) begin
-            src_channel = 14'b1000;
+            src_channel = 14'b01000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
         end
 
         // ( 0x50800 .. 0x51000 )
         if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h50800 ) begin
-            src_channel = 14'b0001;
+            src_channel = 14'b00001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+        end
+
+        // ( 0x51000 .. 0x51020 )
+        if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h51000 ) begin
+            src_channel = 14'b10000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
         end
 
 end

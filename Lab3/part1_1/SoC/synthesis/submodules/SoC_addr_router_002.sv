@@ -200,7 +200,7 @@ module SoC_addr_router_002
         // ( 0x51040 .. 0x51048 )
         if ( {address[RG:PAD7],{PAD7{1'b0}}} == 19'h51040 ) begin
             src_channel = 14'b00000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
         end
 
 end

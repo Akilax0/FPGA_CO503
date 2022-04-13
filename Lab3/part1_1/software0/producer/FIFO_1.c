@@ -21,10 +21,12 @@ void WRITE_FIFO_1(int *buffer)
 
 	// Write the data to FIFO
 	IOWR_32DIRECT(MEM_BASE,writep,*buffer);
-	//printf("Producer sent [%i]\t%x\t%i\n",*buffer,writep,IORD_32DIRECT(MEM_BASE,writep));
+	/*printf("Producer sent [%i]\t%x\t%i\n",*buffer,writep,IORD_32DIRECT(MEM_BASE,writep));*/
 	// Update the write pointer
 	writep += UNIT_SIZE;
 //
+	printf("Counter : [%i]\t CAPACITY : [%i]\n ", IORD_32DIRECT(MEM_BASE,countp),CAPACITY);
+
 	if(writep==(CAPACITY*UNIT_SIZE)+STARTP){
 		writep = STARTP;
 	}

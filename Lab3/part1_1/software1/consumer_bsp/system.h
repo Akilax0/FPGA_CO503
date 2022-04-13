@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu1' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part1_1/SoC.sopcinfo
  *
- * Generated: Sat Apr 02 15:37:18 IST 2022
+ * Generated: Wed Apr 13 11:18:33 IST 2022
  */
 
 /*
@@ -319,7 +319,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1648893454
+#define SYSID_TIMESTAMP 1649828768
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

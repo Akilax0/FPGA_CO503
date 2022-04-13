@@ -15,6 +15,6 @@
   </columns>
  </clocktable>
  <library
-   expandedCategories="Library/Interface Protocols/Serial,Library/Memories and Memory Controllers,Library/SLS/Communication/USB,Library/SLS/Communication,Library/DSP/Video and Image Processing,Library/Memories and Memory Controllers/External Memory Interfaces/DDR3 Interfaces,Library/DSP,Library,Library/Memories and Memory Controllers/External Memory Interfaces/RLDRAM II Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/SDRAM Interfaces,Library/SLS,Library/Memories and Memory Controllers/External Memory Interfaces/RLDRAM 3 Interfaces,Library/Memories and Memory Controllers/On-Chip,Library/Memories and Memory Controllers/External Memory Interfaces/DDR2 Interfaces,Project,Library/Memories and Memory Controllers/External Memory Interfaces/Memory Models,Library/Memories and Memory Controllers/External Memory Interfaces,Library/Interface Protocols,Library/Memories and Memory Controllers/External Memory Interfaces/QDR II Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/DDR Interfaces,Library/Memories and Memory Controllers/External Memory Interfaces/LPDDR2 Interfaces" />
- <window width="1726" height="978" x="-443" y="229" />
+   expandedCategories="Library/Peripherals,Library,Library/Peripherals/Microcontroller Peripherals,Project" />
+ <window width="1726" height="978" x="1501" y="-969" />
 </preferences>

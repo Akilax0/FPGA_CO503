@@ -22,7 +22,7 @@
 #include <stdio.h>
 
 
-#define MEM_BASE 0x00020048 // Base address of the memory device. SET THIS PROPERLY
+#define MEM_BASE 0x00030048  // Base address of the memory device. SET THIS PROPERLY
 #define CAPACITY 64 // Depth of the fifo. SET THIS AS REQUIRED
 #define UNIT_SIZE 32 // Size of an entry in bytes 32 
 #define STARTP 0xC // Start of the actual fifo storage area. (3 words from the start of "full", just after "count") This address is relative to the MEM_BASE. (Prev Fifo's STARTP + 0x14 + Prev Fifo's size)
