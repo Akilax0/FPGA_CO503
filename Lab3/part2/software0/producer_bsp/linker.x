@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/SoC.sopcinfo
  *
- * Generated: Tue Mar 29 23:33:08 IST 2022
+ * Generated: Fri Apr 15 16:34:37 IST 2022
  */
 
 /*

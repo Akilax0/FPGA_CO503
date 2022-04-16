@@ -1,7 +1,6 @@
 /*
  * 	Template of producer application using FIFO
  *
- 
 */
 
 #include "FIFO_1.h"
@@ -13,15 +12,18 @@ int producer();
 
 int main()
 {
-	alt_u32 sw_fast_timeA, sw_fast_timeB;
-	alt_timestamp_start();
-	sw_fast_timeA = alt_timestamp();
+	printf("Starting main....\n");
+
+//	alt_u32 sw_fast_timeA, sw_fast_timeB;
+//	alt_timestamp_start();
+//
+//	sw_fast_timeA = alt_timestamp();
 
 	producer();
 
-	sw_fast_timeB = alt_timestamp();
-
-	printf("Time for Write operation: %.2lu ms\n",1000*((unsigned long)(sw_fast_timeB-sw_fast_timeA))/((unsigned long)alt_timestamp_freq()));
+//	sw_fast_timeB = alt_timestamp();
+//
+//	printf("Time for Write operation: %.2lu ms\n",1000*((unsigned long)(sw_fast_timeB-sw_fast_timeA))/((unsigned long)alt_timestamp_freq()));
 	while(1) { }
 
 	return 0;

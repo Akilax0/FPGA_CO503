@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 13, 2022 12:12:58 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1649832178462</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Apr 15, 2022 5:11:02 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1650022862575</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part2\software0\producer_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\DELL\Documents\Academics\sem6\CO503\FPGA_CO503\Lab3\part2\SoC.sopcinfo</SopcDesignFile>
@@ -26,7 +26,7 @@
                 <SettingName>hal.timestamp_timer</SettingName>
                 <Identifier>ALT_TIMESTAMP_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>high_scale_timer0</Value>
+                <Value>none</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of timestamp timer device. This device is used by Altera HAL timestamp drivers for high-resolution time measurement. This setting defines the value of ALT_TIMESTAMP_CLK in system.h.</Description>
@@ -861,12 +861,6 @@
                 <addressRange>0x00028000 - 0x0002FFFF</addressRange>
                 <addressSpan>32768</addressSpan>
                 <attributes>memory</attributes>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>high_scale_timer0</slaveDescriptor>
-                <addressRange>0x00031040 - 0x0003105F</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>fifo_0_in_csr</slaveDescriptor>

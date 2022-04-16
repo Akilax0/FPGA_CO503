@@ -1,0 +1,13 @@
+!SESSION 2022-04-15 20:50:44.007 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-04-15 20:51:48.792
+!MESSAGE Indexed 'stage6_bsp' (81 sources, 61 headers) in 0.94 sec: 1,051 declarations; 2,626 references; 117 unresolved inclusions; 5 syntax errors; 217 unresolved names (5.57%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-04-15 20:51:50.782
+!MESSAGE Indexed 'stage6' (0 sources, 13 headers) in 0.02 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)

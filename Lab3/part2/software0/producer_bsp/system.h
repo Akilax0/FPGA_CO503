@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu0' in SOPC Builder design 'SoC'
  * SOPC Builder design path: C:/Users/DELL/Documents/Academics/sem6/CO503/FPGA_CO503/Lab3/part2/SoC.sopcinfo
  *
- * Generated: Wed Apr 13 11:41:54 IST 2022
+ * Generated: Fri Apr 15 17:11:03 IST 2022
  */
 
 /*
@@ -267,33 +267,7 @@
 
 #define ALT_MAX_FD 32
 #define ALT_SYS_CLK TIMER_0
-#define ALT_TIMESTAMP_CLK HIGH_SCALE_TIMER0
-
-
-/*
- * high_scale_timer0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_high_scale_timer0 altera_avalon_timer
-#define HIGH_SCALE_TIMER0_ALWAYS_RUN 0
-#define HIGH_SCALE_TIMER0_BASE 0x31040
-#define HIGH_SCALE_TIMER0_COUNTER_SIZE 32
-#define HIGH_SCALE_TIMER0_FIXED_PERIOD 0
-#define HIGH_SCALE_TIMER0_FREQ 50000000u
-#define HIGH_SCALE_TIMER0_IRQ 3
-#define HIGH_SCALE_TIMER0_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define HIGH_SCALE_TIMER0_LOAD_VALUE 49ull
-#define HIGH_SCALE_TIMER0_MULT 1.0E-6
-#define HIGH_SCALE_TIMER0_NAME "/dev/high_scale_timer0"
-#define HIGH_SCALE_TIMER0_PERIOD 1
-#define HIGH_SCALE_TIMER0_PERIOD_UNITS "us"
-#define HIGH_SCALE_TIMER0_RESET_OUTPUT 0
-#define HIGH_SCALE_TIMER0_SNAPSHOT 1
-#define HIGH_SCALE_TIMER0_SPAN 32
-#define HIGH_SCALE_TIMER0_TICKS_PER_SEC 1000000u
-#define HIGH_SCALE_TIMER0_TIMEOUT_PULSE_OUTPUT 0
-#define HIGH_SCALE_TIMER0_TYPE "altera_avalon_timer"
+#define ALT_TIMESTAMP_CLK none
 
 
 /*
@@ -355,7 +329,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1649830190
+#define SYSID_TIMESTAMP 1650022660
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
